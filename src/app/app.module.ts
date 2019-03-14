@@ -7,7 +7,8 @@ import { MainComponent } from './main/main.component';
 import { LoginComponent } from './login/login.component';
 import { HeaderComponent } from './main/header/header.component';
 import { FooterComponent } from './main/footer/footer.component';
-import { MenuSidebarComponent } from './main/menu-sidbar/menu-sidebar.component';
+import { MenuSidebarComponent } from './main/menu-sidebar/menu-sidebar.component';
+import { BlankComponent } from './pages/blank/blank.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { MenuSidebarComponent } from './main/menu-sidbar/menu-sidebar.component'
     LoginComponent,
     HeaderComponent,
     FooterComponent,
-    MenuSidebarComponent
+    MenuSidebarComponent,
+    BlankComponent
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],
