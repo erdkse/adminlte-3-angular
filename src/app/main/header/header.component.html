@@ -18,11 +18,12 @@
   </ul>
 
   <!-- SEARCH FORM -->
-  <form class="form-inline ml-3">
+  <form class="form-inline ml-3" [formGroup]="searchForm">
     <div class="input-group input-group-sm">
       <input
         class="form-control form-control-navbar"
         type="search"
+        formControlName="search"
         placeholder="Search"
         aria-label="Search"
       />

@@ -1,3 +1,48 @@
-<p>
-  login works!
-</p>
+<div class="login-box">
+  <div class="login-logo">
+    <a [routerLink]="['/']">Admin<b>LTE</b></a>
+  </div>
+
+  <div class="card">
+    <div class="card-body login-card-body">
+      <p class="login-box-msg">Sign in to start your session</p>
+      <form [formGroup]="loginForm">
+        <div class="input-group mb-3">
+          <input
+            type="email"
+            ref="email"
+            class="form-control"
+            placeholder="Email"
+            formControlName="email"
+          />
+          <div class="input-group-append">
+            <span class="fa fa-envelope input-group-text"></span>
+          </div>
+        </div>
+        <div class="input-group mb-3">
+          <input
+            type="password"
+            ref="password"
+            class="form-control"
+            placeholder="Password"
+            formControlName="password"
+          />
+          <div class="input-group-append">
+            <span class="fa fa-lock input-group-text"></span>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-4 offset-8">
+            <button
+              class="btn btn-primary btn-block btn-flat"
+              type="submit"
+              (click)="logIn()"
+            >
+              Login
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
