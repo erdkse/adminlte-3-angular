@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AppService } from 'src/app/utils/services/app.service';
 
 @Component({
   selector: 'app-menu-sidebar',
@@ -6,10 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./menu-sidebar.component.scss']
 })
 export class MenuSidebarComponent implements OnInit {
+  constructor(public appService: AppService) {}
 
-  constructor() { }
-
-  ngOnInit() {
-  }
-
+  ngOnInit() {}
 }

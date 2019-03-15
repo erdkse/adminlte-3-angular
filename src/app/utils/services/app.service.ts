@@ -6,9 +6,9 @@ import { Router } from '@angular/router';
 })
 export class AppService {
   public user = {
-    firstName: 'Erdi',
-    lastName: 'Köse',
-    image: 'assets/'
+    firstName: 'Alexander',
+    lastName: 'Pierce',
+    image: 'assets/img/user2-160x160.jpg'
   };
 
   constructor(private router: Router) {}
