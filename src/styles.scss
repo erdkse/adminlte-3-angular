@@ -1,9 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
 
-@import '../node_modules/bootstrap/dist/css/bootstrap.css';
-@import '../node_modules//font-awesome/css/font-awesome.min.css';
-@import '../node_modules//ionicons/css/ionicons.min.css';
-@import '../node_modules/admin-lte/dist/css/adminlte.min.css';
+@import "../node_modules/bootstrap/dist/css/bootstrap.css";
+@import "../node_modules//font-awesome/css/font-awesome.min.css";
+@import "../node_modules/@fortawesome/fontawesome-free/css/all.min.css";
+@import "../node_modules//ionicons/css/ionicons.min.css";
+@import "../node_modules/admin-lte/dist/css/adminlte.min.css";
 
 ::-webkit-scrollbar {
   width: 0px;
@@ -13,79 +14,70 @@
 }
 
 /* optional: show position indicator in red */
-::-webkit-scrollbar-thumb {
-  background: #ff0000;
-}
+// ::-webkit-scrollbar-thumb {
+//   background: #ff0000;
+// }
 
-body {
-  min-height: 100vh;
-}
+// body {
+//   min-height: 100vh;
+// }
 
-#root {
-  /* height: calc(100vh - 112px); */
-  min-height: 100vh;
-}
+// #root {
+//   height: calc(100vh - 112px);
+//   min-height: 100vh;
+// }
 
-.content-wrapper {
-  min-height: calc(100vh - 112px);
-}
+// .content-wrapper {
+//   min-height: calc(100vh - 112px) !important;
+// }
 
-.main-header button {
-  background: transparent;
-  border: none;
-  outline: none;
-  cursor: pointer;
-}
+// .main-header button {
+//   background: transparent;
+//   border: none;
+//   outline: none;
+//   cursor: pointer;
+// }
 
-.main-sidebar {
-  overflow-x: hidden;
-  z-index: 1001;
-}
+// .login-card-body,
+// .register-card-body {
+//   background: #fff;
+//   padding: 20px;
+//   border-top: 0;
+//   color: #666;
+// }
 
-#sidebar-overlay {
-  z-index: 1000;
-}
+// .login-card-body .input-group .input-group-text,
+// .register-card-body .input-group .input-group-text {
+//   color: #777;
+//   background-color: transparent;
+// }
 
-.login-card-body,
-.register-card-body {
-  background: #fff;
-  padding: 20px;
-  border-top: 0;
-  color: #666;
-}
+// .login-card-body .input-group .form-control,
+// .register-card-body .input-group .form-control {
+//   border-right: none;
+// }
 
-.login-card-body .input-group .input-group-text,
-.register-card-body .input-group .input-group-text {
-  color: #777;
-  background-color: transparent;
-}
+// ::-webkit-scrollbar {
+//   width: 0px;
+//   height: 8px;
+//   background: transparent;
+// }
 
-.login-card-body .input-group .form-control,
-.register-card-body .input-group .form-control {
-  border-right: none;
-}
+// ::-webkit-scrollbar-thumb {
+//   background: #343a40dd;
+//   border-radius: 8px;
+// }
 
-::-webkit-scrollbar {
-  width: 0px;
-  height: 8px;
-  background: transparent;
-}
+// /*  */
 
-::-webkit-scrollbar-thumb {
-  background: #343a40dd;
-  border-radius: 8px;
-}
+// .card.user-list tr:hover {
+//   cursor: pointer;
+// }
 
-/*  */
+// .card.card-primary .card-header {
+//   background-color: #4f5962;
+// }
 
-.card.user-list tr:hover {
-  cursor: pointer;
-}
-
-.card.card-primary .card-header {
-  background-color: #4f5962;
-}
-
-*:disabled {
-  cursor: not-allowed;
-}
+// *:disabled {
+//   cursor: not-allowed;
+// }
