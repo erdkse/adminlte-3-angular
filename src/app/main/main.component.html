@@ -1,9 +1,11 @@
 <div class="wrapper">
   <app-header (toggleMenuSidebar)="toggleMenuSidebar()"></app-header>
 
-  <app-menu-sidebar></app-menu-sidebar>
+  <app-menu-sidebar
+    (mainSidebarHeight)="mainSidebarHeight($event)"
+  ></app-menu-sidebar>
 
-  <div class="content-wrapper">
+  <div #contentWrapper class="content-wrapper">
     <router-outlet></router-outlet>
   </div>
 
