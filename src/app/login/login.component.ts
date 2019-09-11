@@ -1,7 +1,7 @@
 import { Component, OnInit, OnDestroy, Renderer2 } from '@angular/core';
 import { AppService } from '../utils/services/app.service';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
-import { NotificationsService } from 'angular2-notifications';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-login',
@@ -12,7 +12,7 @@ export class LoginComponent implements OnInit, OnDestroy {
   public loginForm: FormGroup;
   constructor(
     private renderer: Renderer2,
-    private notificationsService: NotificationsService,
+    private toastr: ToastrService,
     private appService: AppService
   ) {}
 
@@ -28,7 +28,7 @@ export class LoginComponent implements OnInit, OnDestroy {
     if (this.loginForm.valid) {
       this.appService.login();
     } else {
-      this.notificationsService.error('Error', 'Fill the form');
+      this.toastr.error('Hello world!', 'Toastr fun!');
     }
   }
 

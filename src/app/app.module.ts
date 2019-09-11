@@ -10,10 +10,11 @@ import { FooterComponent } from './main/footer/footer.component';
 import { MenuSidebarComponent } from './main/menu-sidebar/menu-sidebar.component';
 import { BlankComponent } from './pages/blank/blank.component';
 import { ReactiveFormsModule } from '@angular/forms';
-import { SimpleNotificationsModule } from 'angular2-notifications';
 import { ProfileComponent } from './pages/profile/profile.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RegisterComponent } from './register/register.component';
+import { DashboardComponent } from './pages/dashboard/dashboard.component';
+import { ToastrModule } from 'ngx-toastr';
 
 @NgModule({
   declarations: [
@@ -25,18 +26,18 @@ import { RegisterComponent } from './register/register.component';
     MenuSidebarComponent,
     BlankComponent,
     ProfileComponent,
-    RegisterComponent
+    RegisterComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
-    SimpleNotificationsModule.forRoot({
-      timeOut: 3000,
-      showProgressBar: true,
-      pauseOnHover: true,
-      clickToClose: true
+    ToastrModule.forRoot({
+      timeOut: 10000,
+      positionClass: 'toast-bottom-right',
+      preventDuplicates: true
     })
   ],
   providers: [],

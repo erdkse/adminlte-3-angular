@@ -9,7 +9,12 @@
 
       <form [formGroup]="loginForm">
         <div class="input-group mb-3">
-          <input type="email" class="form-control" placeholder="Email" />
+          <input
+            formControlName="email"
+            type="email"
+            class="form-control"
+            placeholder="Email"
+          />
           <div class="input-group-append">
             <div class="input-group-text">
               <span class="fas fa-envelope"></span>
@@ -17,7 +22,12 @@
           </div>
         </div>
         <div class="input-group mb-3">
-          <input type="password" class="form-control" placeholder="Password" />
+          <input
+            formControlName="password"
+            type="password"
+            class="form-control"
+            placeholder="Password"
+          />
           <div class="input-group-append">
             <div class="input-group-text">
               <span class="fas fa-lock"></span>
@@ -30,16 +40,20 @@
               <input
                 type="checkbox"
                 class="custom-control-input"
-                id="customCheck1"
+                id="rememberMe"
               />
-              <label class="custom-control-label" for="customCheck1"
+              <label class="custom-control-label" for="rememberMe"
                 >Remember me</label
               >
             </div>
           </div>
           <!-- /.col -->
           <div class="col-4">
-            <button type="submit" class="btn btn-primary btn-block btn-flat">
+            <button
+              (click)="logIn()"
+              type="submit"
+              class="btn btn-primary btn-block btn-flat"
+            >
               Sign In
             </button>
           </div>
@@ -59,7 +73,7 @@
       <!-- /.social-auth-links -->
 
       <p class="mb-1">
-        <a href="#">I forgot my password</a>
+        <a>I forgot my password</a>
       </p>
       <p class="mb-0">
         <a [routerLink]="['/register']" class="text-center"

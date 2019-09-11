@@ -6,6 +6,9 @@
 @import "../node_modules//ionicons/css/ionicons.min.css";
 @import "../node_modules/admin-lte/dist/css/adminlte.min.css";
 
+@import '~ngx-toastr/toastr';
+
+
 ::-webkit-scrollbar {
   width: 0px;
   /* remove scrollbar space */
