@@ -5,6 +5,7 @@ import { BlankComponent } from './pages/blank/blank.component';
 import { LoginComponent } from './login/login.component';
 import { ProfileComponent } from './pages/profile/profile.component';
 import { RegisterComponent } from './register/register.component';
+import { DashboardComponent } from './pages/dashboard/dashboard.component';
 
 const routes: Routes = [
   {
@@ -16,8 +17,12 @@ const routes: Routes = [
         component: ProfileComponent
       },
       {
-        path: '',
+        path: 'blank',
         component: BlankComponent
+      },
+      {
+        path: '',
+        component: DashboardComponent
       }
     ]
   },

@@ -1,4 +1,3 @@
-<!-- Content Header (Page header) -->
 <section class="content-header">
   <div class="container-fluid">
     <div class="row mb-2">
@@ -27,14 +26,12 @@
             <div class="text-center">
               <img
                 class="profile-user-img img-fluid img-circle"
-                [src]="appService.user.image"
+                src="assets/img/user4-128x128.jpg"
                 alt="User profile picture"
               />
             </div>
 
-            <h3 class="profile-username text-center">
-              {{ appService.user.firstName + ' ' + appService.user.lastName }}
-            </h3>
+            <h3 class="profile-username text-center">Nina Mcintire</h3>
 
             <p class="text-muted text-center">Software Engineer</p>
 
@@ -63,7 +60,7 @@
           </div>
           <!-- /.card-header -->
           <div class="card-body">
-            <strong><i class="fa fa-book mr-1"></i> Education</strong>
+            <strong><i class="fas fa-book mr-1"></i> Education</strong>
 
             <p class="text-muted">
               B.S. in Computer Science from the University of Tennessee at
@@ -72,13 +69,13 @@
 
             <hr />
 
-            <strong><i class="fa fa-map-marker mr-1"></i> Location</strong>
+            <strong><i class="fas fa-map-marker-alt mr-1"></i> Location</strong>
 
             <p class="text-muted">Malibu, California</p>
 
             <hr />
 
-            <strong><i class="fa fa-pencil mr-1"></i> Skills</strong>
+            <strong><i class="fas fa-pencil-alt mr-1"></i> Skills</strong>
 
             <p class="text-muted">
               <span class="tag tag-danger">UI Design</span>
@@ -90,7 +87,7 @@
 
             <hr />
 
-            <strong><i class="fa fa-file-text-o mr-1"></i> Notes</strong>
+            <strong><i class="far fa-file-alt mr-1"></i> Notes</strong>
 
             <p class="text-muted">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
@@ -138,7 +135,7 @@
                     <span class="username">
                       <a href="#">Jonathan Burke Jr.</a>
                       <a href="#" class="float-right btn-tool"
-                        ><i class="fa fa-times"></i
+                        ><i class="fas fa-times"></i
                       ></a>
                     </span>
                     <span class="description"
@@ -156,14 +153,14 @@
 
                   <p>
                     <a href="#" class="link-black text-sm mr-2"
-                      ><i class="fa fa-share mr-1"></i> Share</a
+                      ><i class="fas fa-share mr-1"></i> Share</a
                     >
                     <a href="#" class="link-black text-sm"
-                      ><i class="fa fa-thumbs-o-up mr-1"></i> Like</a
+                      ><i class="far fa-thumbs-up mr-1"></i> Like</a
                     >
                     <span class="float-right">
                       <a href="#" class="link-black text-sm">
-                        <i class="fa fa-comments-o mr-1"></i> Comments (5)
+                        <i class="far fa-comments mr-1"></i> Comments (5)
                       </a>
                     </span>
                   </p>
@@ -187,7 +184,7 @@
                     <span class="username">
                       <a href="#">Sarah Ross</a>
                       <a href="#" class="float-right btn-tool"
-                        ><i class="fa fa-times"></i
+                        ><i class="fas fa-times"></i
                       ></a>
                     </span>
                     <span class="description"
@@ -230,7 +227,7 @@
                     <span class="username">
                       <a href="#">Adam Jones</a>
                       <a href="#" class="float-right btn-tool"
-                        ><i class="fa fa-times"></i
+                        ><i class="fas fa-times"></i
                       ></a>
                     </span>
                     <span class="description"
@@ -284,14 +281,14 @@
 
                   <p>
                     <a href="#" class="link-black text-sm mr-2"
-                      ><i class="fa fa-share mr-1"></i> Share</a
+                      ><i class="fas fa-share mr-1"></i> Share</a
                     >
                     <a href="#" class="link-black text-sm"
-                      ><i class="fa fa-thumbs-o-up mr-1"></i> Like</a
+                      ><i class="far fa-thumbs-up mr-1"></i> Like</a
                     >
                     <span class="float-right">
                       <a href="#" class="link-black text-sm">
-                        <i class="fa fa-comments-o mr-1"></i> Comments (5)
+                        <i class="far fa-comments mr-1"></i> Comments (5)
                       </a>
                     </span>
                   </p>
@@ -307,21 +304,21 @@
               <!-- /.tab-pane -->
               <div class="tab-pane" id="timeline">
                 <!-- The timeline -->
-                <ul class="timeline timeline-inverse">
+                <div class="timeline timeline-inverse">
                   <!-- timeline time label -->
-                  <li class="time-label">
+                  <div class="time-label">
                     <span class="bg-danger">
                       10 Feb. 2014
                     </span>
-                  </li>
+                  </div>
                   <!-- /.timeline-label -->
                   <!-- timeline item -->
-                  <li>
-                    <i class="fa fa-envelope bg-primary"></i>
+                  <div>
+                    <i class="fas fa-envelope bg-primary"></i>
 
                     <div class="timeline-item">
                       <span class="time"
-                        ><i class="fa fa-clock-o"></i> 12:05</span
+                        ><i class="far fa-clock"></i> 12:05</span
                       >
 
                       <h3 class="timeline-header">
@@ -340,30 +337,30 @@
                         <a href="#" class="btn btn-danger btn-sm">Delete</a>
                       </div>
                     </div>
-                  </li>
+                  </div>
                   <!-- END timeline item -->
                   <!-- timeline item -->
-                  <li>
-                    <i class="fa fa-user bg-info"></i>
+                  <div>
+                    <i class="fas fa-user bg-info"></i>
 
                     <div class="timeline-item">
                       <span class="time"
-                        ><i class="fa fa-clock-o"></i> 5 mins ago</span
+                        ><i class="far fa-clock"></i> 5 mins ago</span
                       >
 
-                      <h3 class="timeline-header no-border">
+                      <h3 class="timeline-header border-0">
                         <a href="#">Sarah Young</a> accepted your friend request
                       </h3>
                     </div>
-                  </li>
+                  </div>
                   <!-- END timeline item -->
                   <!-- timeline item -->
-                  <li>
-                    <i class="fa fa-comments bg-warning"></i>
+                  <div>
+                    <i class="fas fa-comments bg-warning"></i>
 
                     <div class="timeline-item">
                       <span class="time"
-                        ><i class="fa fa-clock-o"></i> 27 mins ago</span
+                        ><i class="far fa-clock"></i> 27 mins ago</span
                       >
 
                       <h3 class="timeline-header">
@@ -381,23 +378,22 @@
                         >
                       </div>
                     </div>
-                  </li>
-                  <!--
- END timeline item -->
+                  </div>
+                  <!-- END timeline item -->
                   <!-- timeline time label -->
-                  <li class="time-label">
+                  <div class="time-label">
                     <span class="bg-success">
                       3 Jan. 2014
                     </span>
-                  </li>
+                  </div>
                   <!-- /.timeline-label -->
                   <!-- timeline item -->
-                  <li>
-                    <i class="fa fa-camera bg-purple"></i>
+                  <div>
+                    <i class="fas fa-camera bg-purple"></i>
 
                     <div class="timeline-item">
                       <span class="time"
-                        ><i class="fa fa-clock-o"></i> 2 days ago</span
+                        ><i class="far fa-clock"></i> 2 days ago</span
                       >
 
                       <h3 class="timeline-header">
@@ -405,123 +401,70 @@
                       </h3>
 
                       <div class="timeline-body">
-                        <img
-                          src="http://placehold.it/150x100"
-                          alt="..."
-                          class="margin"
-                        />
-                        <img
-                          src="http://placehold.it/150x100"
-                          alt="..."
-                          class="margin"
-                        />
-                        <img
-                          src="http://placehold.it/150x100"
-                          alt="..."
-                          class="margin"
-                        />
-                        <img
-                          src="http://placehold.it/150x100"
-                          alt="..."
-                          class="margin"
-                        />
+                        <img src="http://placehold.it/150x100" alt="..." />
+                        <img src="http://placehold.it/150x100" alt="..." />
+                        <img src="http://placehold.it/150x100" alt="..." />
+                        <img src="http://placehold.it/150x100" alt="..." />
                       </div>
                     </div>
-                  </li>
+                  </div>
                   <!-- END timeline item -->
-                  <li>
-                    <i class="fa fa-clock-o bg-gray"></i>
-                  </li>
-                </ul>
+                  <div>
+                    <i class="far fa-clock bg-gray"></i>
+                  </div>
+                </div>
               </div>
               <!-- /.tab-pane -->
 
               <div class="tab-pane" id="settings">
                 <!-- <form class="form-horizontal">
                   <div class="form-group">
-                    <label for="inputName" class="col-sm-2 control-label"
-                      >Name</label
-                    >
+                    <label for="inputName" class="col-sm-2 control-label">Name</label>
 
                     <div class="col-sm-10">
-                      <input
-                        type="email"
-                        class="form-control"
-                        id="inputName"
-                        placeholder="Name"
-                      />
+                      <input type="email" class="form-control" id="inputName" placeholder="Name">
                     </div>
                   </div>
                   <div class="form-group">
-                    <label for="inputEmail" class="col-sm-2 control-label"
-                      >Email</label
-                    >
+                    <label for="inputEmail" class="col-sm-2 control-label">Email</label>
 
                     <div class="col-sm-10">
-                      <input
-                        type="email"
-                        class="form-control"
-                        id="inputEmail"
-                        placeholder="Email"
-                      />
+                      <input type="email" class="form-control" id="inputEmail" placeholder="Email">
                     </div>
                   </div>
                   <div class="form-group">
-                    <label for="inputName2" class="col-sm-2 control-label"
-                      >Name</label
-                    >
+                    <label for="inputName2" class="col-sm-2 control-label">Name</label>
 
                     <div class="col-sm-10">
-                      <input
-                        type="text"
-                        class="form-control"
-                        id="inputName2"
-                        placeholder="Name"
-                      />
+                      <input type="text" class="form-control" id="inputName2" placeholder="Name">
                     </div>
                   </div>
                   <div class="form-group">
-                    <label for="inputExperience" class="col-sm-2 control-label"
-                      >Experience</label
-                    >
+                    <label for="inputExperience" class="col-sm-2 control-label">Experience</label>
 
                     <div class="col-sm-10">
-                      <textarea
-                        class="form-control"
-                        id="inputExperience"
-                        placeholder="Experience"
-                      ></textarea>
+                      <textarea class="form-control" id="inputExperience" placeholder="Experience"></textarea>
                     </div>
                   </div>
                   <div class="form-group">
-                    <label for="inputSkills" class="col-sm-2 control-label"
-                      >Skills</label
-                    >
+                    <label for="inputSkills" class="col-sm-2 control-label">Skills</label>
 
                     <div class="col-sm-10">
-                      <input
-                        type="text"
-                        class="form-control"
-                        id="inputSkills"
-                        placeholder="Skills"
-                      />
+                      <input type="text" class="form-control" id="inputSkills" placeholder="Skills">
                     </div>
                   </div>
                   <div class="form-group">
                     <div class="col-sm-offset-2 col-sm-10">
                       <div class="checkbox">
                         <label>
-                          <input type="checkbox" /> I agree to the
-                          <a href="#">terms and conditions</a>
+                          <input type="checkbox"> I agree to the <a href="#">terms and conditions</a>
                         </label>
                       </div>
                     </div>
                   </div>
                   <div class="form-group">
                     <div class="col-sm-offset-2 col-sm-10">
-                      <button type="submit" class="btn btn-danger">
-                        Submit
-                      </button>
+                      <button type="submit" class="btn btn-danger">Submit</button>
                     </div>
                   </div>
                 </form> -->
@@ -540,4 +483,3 @@
   </div>
   <!-- /.container-fluid -->
 </section>
-<!-- /.content -->

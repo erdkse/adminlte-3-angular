@@ -17,7 +17,7 @@ export class MainComponent implements OnInit {
     this.renderer.setStyle(
       this.contentWrapper.nativeElement,
       'height',
-      height + 'px'
+      height - 57 + 'px'
     );
     console.log(
       'mainSidebarHeight',
