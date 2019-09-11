@@ -14,11 +14,11 @@ export class MainComponent implements OnInit {
   ngOnInit() {}
 
   mainSidebarHeight(height) {
-    this.renderer.setStyle(
-      this.contentWrapper.nativeElement,
-      'height',
-      height - 57 + 'px'
-    );
+    // this.renderer.setStyle(
+    //   this.contentWrapper.nativeElement,
+    //   'min-height',
+    //   height - 114 + 'px'
+    // );
     console.log(
       'mainSidebarHeight',
       this.contentWrapper.nativeElement.offsetHeight
