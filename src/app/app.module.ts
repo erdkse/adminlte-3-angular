@@ -15,6 +15,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RegisterComponent } from './register/register.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { ToastrModule } from 'ngx-toastr';
+import { MessagesDropdownMenuComponent } from './main/header/messages-dropdown-menu/messages-dropdown-menu.component';
+import { NotificationsDropdownMenuComponent } from './main/header/notifications-dropdown-menu/notifications-dropdown-menu.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +29,9 @@ import { ToastrModule } from 'ngx-toastr';
     BlankComponent,
     ProfileComponent,
     RegisterComponent,
-    DashboardComponent
+    DashboardComponent,
+    MessagesDropdownMenuComponent,
+    NotificationsDropdownMenuComponent
   ],
   imports: [
     BrowserModule,

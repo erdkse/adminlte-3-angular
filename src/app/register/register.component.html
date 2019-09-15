@@ -46,15 +46,14 @@
         </div>
         <div class="row">
           <div class="col-8">
-            <div class="icheck-primary">
+            <div class="custom-control custom-checkbox">
               <input
                 type="checkbox"
-                id="agreeTerms"
-                name="terms"
-                value="agree"
+                class="custom-control-input"
+                id="acceptTerms"
               />
-              <label for="agreeTerms">
-                I agree to the <a href="#">terms</a>
+              <label class="custom-control-label" for="acceptTerms"
+                >I agree to the <a href="#">terms</a>
               </label>
             </div>
           </div>
@@ -80,7 +79,9 @@
         </a>
       </div>
 
-      <a [routerLink]="['/login']" class="text-center">I already have a membership</a>
+      <a [routerLink]="['/login']" class="text-center"
+        >I already have a membership</a
+      >
     </div>
     <!-- /.form-box -->
   </div>
