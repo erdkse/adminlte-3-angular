@@ -7,16 +7,16 @@ import {
   ViewChild,
   Output,
   EventEmitter
-} from "@angular/core";
-import { AppService } from "src/app/utils/services/app.service";
+} from '@angular/core';
+import { AppService } from 'src/app/utils/services/app.service';
 
 @Component({
-  selector: "app-menu-sidebar",
-  templateUrl: "./menu-sidebar.component.html",
-  styleUrls: ["./menu-sidebar.component.scss"]
+  selector: 'app-menu-sidebar',
+  templateUrl: './menu-sidebar.component.html',
+  styleUrls: ['./menu-sidebar.component.scss']
 })
 export class MenuSidebarComponent implements OnInit, AfterViewInit {
-  @ViewChild("mainSidebar", { static: false }) mainSidebar;
+  @ViewChild('mainSidebar', { static: false }) mainSidebar;
   @Output() mainSidebarHeight: EventEmitter<any> = new EventEmitter<any>();
   constructor(public appService: AppService) {}
 
