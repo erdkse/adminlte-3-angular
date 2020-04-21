@@ -2,11 +2,12 @@
   "name": "adminlte",
   "version": "0.1.0",
   "scripts": {
-    "start": "ng serve",
-    "build": "ng build",
-    "test": "ng test",
-    "lint": "ng lint",
-    "e2e": "ng e2e"
+    "start": "node server.js",
+    "dev:start": "ng serve",
+    "dev:build": "ng build",
+    "dev:test": "ng test",
+    "dev:lint": "ng lint",
+    "dev:e2e": "ng e2e"
   },
   "private": true,
   "dependencies": {
@@ -20,6 +21,7 @@
     "@angular/router": "~9.1.2",
     "bootstrap": "^4.3.1",
     "core-js": "^2.5.4",
+    "express": "^4.17.1",
     "font-awesome": "4.7.0",
     "ionicons": "2.0.1",
     "ngx-toastr": "^10.2.0",
