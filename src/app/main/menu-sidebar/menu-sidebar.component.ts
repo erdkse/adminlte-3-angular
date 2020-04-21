@@ -1,13 +1,4 @@
-import {
-  Component,
-  OnInit,
-  AfterViewInit,
-  Renderer2,
-  ElementRef,
-  ViewChild,
-  Output,
-  EventEmitter
-} from '@angular/core';
+import { Component, OnInit, AfterViewInit, ViewChild, Output, EventEmitter } from '@angular/core';
 import { AppService } from 'src/app/utils/services/app.service';
 
 @Component({

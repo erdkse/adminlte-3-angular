@@ -7,7 +7,7 @@ orbs:
 commands:
   add-build-folder-to-git:
     steps:
-      - run: cp -r dist build
+      - run: cp -r dist/adminlte build
       - run: git config user.email "commits-noreply@github.com"
       - run: git config user.name "github-pipelines"
       - run: git add .
