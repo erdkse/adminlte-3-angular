@@ -1,8 +1,7 @@
 {
   "name": "adminlte",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "scripts": {
-    "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
     "test": "ng test",
@@ -24,7 +23,7 @@
     "font-awesome": "4.7.0",
     "ionicons": "2.0.1",
     "ngx-toastr": "^10.2.0",
-    "rxjs": "~6.5.3",
+    "rxjs": "~6.5.5",
     "tslib": "^1.11.1",
     "zone.js": "~0.10.3"
   },
@@ -37,7 +36,7 @@
     "@types/jasmine": "~2.8.8",
     "@types/jasminewd2": "~2.0.3",
     "@types/node": "~8.9.4",
-    "admin-lte": "3.0.0-rc.1",
+    "admin-lte": "3.0.4",
     "codelyzer": "^5.0.1",
     "jasmine-core": "~2.99.1",
     "jasmine-spec-reporter": "~4.2.1",
