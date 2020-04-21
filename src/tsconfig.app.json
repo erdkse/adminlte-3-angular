@@ -7,11 +7,7 @@
   "angularCompilerOptions": {
     "enableIvy": true
   },
-  "files": [
-    "main.ts",
-    "polyfills.ts"
-  ],
-  "include": [
-    "**/*.d.ts"
-  ]
+  "files": ["main.ts", "polyfills.ts"],
+  "include": ["**/*.d.ts"],
+  "exclude": ["node_modules", "**/*.spec.ts"]
 }
