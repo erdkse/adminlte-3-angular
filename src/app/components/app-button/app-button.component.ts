@@ -10,8 +10,12 @@ export class AppButtonComponent implements OnInit {
   @Input() block: boolean = false;
   @Input() color: string = 'primary';
   @Input() text: string = '';
+  @Input() disabled: boolean = false;
+  @Input() loading: boolean = false;
 
   constructor() {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.disabled = this.disabled || this.loading;
+  }
 }
