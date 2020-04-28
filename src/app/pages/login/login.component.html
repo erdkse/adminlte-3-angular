@@ -1,13 +1,13 @@
 <div class="login-box">
   <div class="login-logo">
-    <a href="../../index2.html"><b>Admin</b>LTE</a>
+    <a [routerLink]="['/']"><b>Admin</b>LTE</a>
   </div>
   <!-- /.login-logo -->
   <div class="card">
     <div class="card-body login-card-body">
       <p class="login-box-msg">Sign in to start your session</p>
 
-      <form [formGroup]="loginForm" (ngSubmit)="logIn()">
+      <form [formGroup]="loginForm" (ngSubmit)="login()">
         <div class="input-group mb-3">
           <input
             formControlName="email"
@@ -35,7 +35,7 @@
           </div>
         </div>
         <div class="row">
-          <div class="col-8">
+          <div class="col-7">
             <div class="icheck-primary">
               <input type="checkbox" id="remember" />
               <label for="remember">
@@ -44,11 +44,12 @@
             </div>
           </div>
           <!-- /.col -->
-          <div class="col-4">
+          <div class="col-5">
             <app-button
               [type]="'submit'"
               [block]="true"
               [text]="'Sign In'"
+              [loading]="isAuthLoading"
             ></app-button>
           </div>
           <!-- /.col -->
@@ -67,10 +68,10 @@
       <!-- /.social-auth-links -->
 
       <p class="mb-1">
-        <a href="forgot-password.html">I forgot my password</a>
+        <a [routerLink]="['/forgot-password']">I forgot my password</a>
       </p>
       <p class="mb-0">
-        <a href="register.html" class="text-center"
+        <a [routerLink]="['/register']" class="text-center"
           >Register a new membership</a
         >
       </p>

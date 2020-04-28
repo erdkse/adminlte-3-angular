@@ -11,7 +11,10 @@ export class MainComponent implements OnInit {
 
   constructor(private renderer: Renderer2) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.renderer.removeClass(document.body, 'login-page');
+    this.renderer.removeClass(document.body, 'register-page');
+  }
 
   mainSidebarHeight(height) {
     // this.renderer.setStyle(

@@ -10,6 +10,7 @@ import { ToastrService } from 'ngx-toastr';
 })
 export class LoginComponent implements OnInit, OnDestroy {
   public loginForm: FormGroup;
+  public isAuthLoading = false;
   constructor(
     private renderer: Renderer2,
     private toastr: ToastrService,
@@ -24,7 +25,7 @@ export class LoginComponent implements OnInit, OnDestroy {
     });
   }
 
-  logIn() {
+  login() {
     if (this.loginForm.valid) {
       this.appService.login();
     } else {
