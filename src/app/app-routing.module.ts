@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { MainComponent } from './main/main.component';
-import { BlankComponent } from './pages/blank/blank.component';
-import { LoginComponent } from './login/login.component';
-import { ProfileComponent } from './pages/profile/profile.component';
-import { RegisterComponent } from './register/register.component';
-import { DashboardComponent } from './pages/dashboard/dashboard.component';
+import { MainComponent } from './pages/main/main.component';
+import { BlankComponent } from './containers/blank/blank.component';
+import { LoginComponent } from './pages/login/login.component';
+import { ProfileComponent } from './containers/profile/profile.component';
+import { RegisterComponent } from './pages/register/register.component';
+import { DashboardComponent } from './containers/dashboard/dashboard.component';
 import { AuthGuard } from './utils/guards/auth.guard';
 import { NonAuthGuard } from './utils/guards/non-auth.guard';
 
@@ -18,33 +18,33 @@ const routes: Routes = [
     children: [
       {
         path: 'profile',
-        component: ProfileComponent
+        component: ProfileComponent,
       },
       {
         path: 'blank',
-        component: BlankComponent
+        component: BlankComponent,
       },
       {
         path: '',
-        component: DashboardComponent
-      }
-    ]
+        component: DashboardComponent,
+      },
+    ],
   },
   {
     path: 'login',
     component: LoginComponent,
-    canActivate: [NonAuthGuard]
+    canActivate: [NonAuthGuard],
   },
   {
     path: 'register',
     component: RegisterComponent,
-    canActivate: [NonAuthGuard]
+    canActivate: [NonAuthGuard],
   },
-  { path: '**', redirectTo: '' }
+  { path: '**', redirectTo: '' },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
 export class AppRoutingModule {}

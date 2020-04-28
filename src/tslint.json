@@ -1,8 +1,0 @@
-{
-  "extends": ["../tslint.json", "tslint-plugin-prettier", "tslint-config-prettier"],
-  "rules": {
-    "directive-selector": [true, "attribute", "app", "camelCase"],
-    "component-selector": [true, "element", "app", "kebab-case"],
-    "prettier": [true, "./.prettierrc"]
-  }
-}

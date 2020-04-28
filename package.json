@@ -7,8 +7,7 @@
     "dev:build": "ng build",
     "dev:test": "ng test",
     "dev:lint": "ng lint",
-    "dev:e2e": "ng e2e",
-    "dev:typecheck": "rm -rf dist && tsc --noUnusedLocals"
+    "dev:e2e": "ng e2e"
   },
   "private": true,
   "dependencies": {
@@ -33,40 +32,41 @@
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.901.1",
     "@angular/cli": "~9.1.1",
-    "@angular/compiler-cli": "~9.1.2",
-    "@angular/language-service": "~9.1.2",
+    "@angular/compiler-cli": "~9.1.1",
+    "@angular/language-service": "~9.1.1",
     "@fortawesome/fontawesome-free": "^5.10.2",
-    "@types/jasmine": "~2.8.8",
+    "@types/jasmine": "~3.5.0",
     "@types/jasminewd2": "~2.0.3",
-    "@types/node": "~8.9.4",
+    "@types/node": "^12.11.1",
     "admin-lte": "3.0.4",
-    "codelyzer": "^5.0.1",
+    "codelyzer": "^5.1.2",
     "husky": "^4.2.5",
-    "jasmine-core": "~2.99.1",
+    "jasmine-core": "~3.5.0",
     "jasmine-spec-reporter": "~4.2.1",
-    "karma": "^4.3.0",
-    "karma-chrome-launcher": "~2.2.0",
-    "karma-coverage-istanbul-reporter": "~2.0.1",
-    "karma-jasmine": "~1.1.2",
-    "karma-jasmine-html-reporter": "^0.2.2",
-    "lint-staged": "^10.1.6",
-    "prettier": "^2.0.4",
-    "protractor": "~5.4.0",
-    "ts-node": "~7.0.0",
-    "tslint": "~5.11.0",
+    "karma": "~4.4.1",
+    "karma-chrome-launcher": "~3.1.0",
+    "karma-coverage-istanbul-reporter": "~2.1.0",
+    "karma-jasmine": "~3.0.1",
+    "karma-jasmine-html-reporter": "^1.4.2",
+    "lint-staged": "^10.2.0",
+    "prettier": "^2.0.5",
+    "pretty-quick": "^2.0.1",
+    "protractor": "~5.4.3",
+    "ts-node": "~8.3.0",
+    "tslint": "~6.1.0",
     "tslint-config-prettier": "^1.18.0",
     "tslint-plugin-prettier": "^2.3.0",
     "typescript": "~3.8.3"
   },
   "lint-staged": {
     "src/**/*.{ts,tsx}": [
-      "tslint --project src/tsconfig.app.json --config src/tslint.json --fix",
+      "node ng-lint-staged.js dev:lint",
       "prettier --write"
     ]
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged"
+      "pre-commit": "pretty-quick --staged && ng lint && lint-staged"
     }
   }
 }
