@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/test",
+            "outputPath": "dist/adminlte",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -61,18 +61,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "test:build"
+            "browserTarget": "adminlte:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "test:build:production"
+              "browserTarget": "adminlte:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "test:build"
+            "browserTarget": "adminlte:build"
           }
         },
         "test": {
@@ -93,7 +93,7 @@
             "tsConfig": [
               "tsconfig.app.json",
               "tsconfig.spec.json",
-              "e2e/tsconfig.e2e.json"
+              "e2e/tsconfig.json"
             ],
             "exclude": ["**/node_modules/**"]
           }
@@ -102,19 +102,19 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "test:serve"
+            "devServerTarget": "adminlte:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "test:serve:production"
+              "devServerTarget": "adminlte:serve:production"
             }
           }
         }
       }
     }
   },
-  "defaultProject": "test",
+  "defaultProject": "adminlte",
   "cli": {
-    "analytics": "4a8844cd-282d-4e98-ad11-c7cd49107070"
+    "analytics": "43a7ce40-5fb9-4a0d-8b40-b48fc0426e9d"
   }
 }

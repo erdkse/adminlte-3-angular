@@ -7,7 +7,7 @@
     <div class="card-body login-card-body">
       <p class="login-box-msg">Sign in to start your session</p>
 
-      <form [formGroup]="loginForm">
+      <form [formGroup]="loginForm" (ngSubmit)="logIn()">
         <div class="input-group mb-3">
           <input
             formControlName="email"
@@ -36,26 +36,20 @@
         </div>
         <div class="row">
           <div class="col-8">
-            <div class="custom-control custom-checkbox">
-              <input
-                type="checkbox"
-                class="custom-control-input"
-                id="rememberMe"
-              />
-              <label class="custom-control-label" for="rememberMe"
-                >Remember me</label
-              >
+            <div class="icheck-primary">
+              <input type="checkbox" id="remember" />
+              <label for="remember">
+                Remember Me
+              </label>
             </div>
           </div>
           <!-- /.col -->
           <div class="col-4">
-            <button
-              (click)="logIn()"
-              type="submit"
-              class="btn btn-primary btn-block btn-flat"
-            >
-              Sign In
-            </button>
+            <app-button
+              [type]="'submit'"
+              [block]="true"
+              [text]="'Sign In'"
+            ></app-button>
           </div>
           <!-- /.col -->
         </div>
@@ -73,10 +67,10 @@
       <!-- /.social-auth-links -->
 
       <p class="mb-1">
-        <a>I forgot my password</a>
+        <a href="forgot-password.html">I forgot my password</a>
       </p>
       <p class="mb-0">
-        <a [routerLink]="['/register']" class="text-center"
+        <a href="register.html" class="text-center"
           >Register a new membership</a
         >
       </p>

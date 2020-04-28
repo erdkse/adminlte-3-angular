@@ -17,6 +17,13 @@ import { DashboardComponent } from './containers/dashboard/dashboard.component';
 import { ToastrModule } from 'ngx-toastr';
 import { MessagesDropdownMenuComponent } from './pages/main/header/messages-dropdown-menu/messages-dropdown-menu.component';
 import { NotificationsDropdownMenuComponent } from './pages/main/header/notifications-dropdown-menu/notifications-dropdown-menu.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { AppButtonComponent } from './components/app-button/app-button.component';
+
+import { registerLocaleData } from '@angular/common';
+import localeEn from '@angular/common/locales/en';
+
+registerLocaleData(localeEn, 'en-EN');
 
 @NgModule({
   declarations: [
@@ -32,6 +39,7 @@ import { NotificationsDropdownMenuComponent } from './pages/main/header/notifica
     DashboardComponent,
     MessagesDropdownMenuComponent,
     NotificationsDropdownMenuComponent,
+    AppButtonComponent,
   ],
   imports: [
     BrowserModule,
@@ -43,6 +51,7 @@ import { NotificationsDropdownMenuComponent } from './pages/main/header/notifica
       positionClass: 'toast-bottom-right',
       preventDuplicates: true,
     }),
+    NgbModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
