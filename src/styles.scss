@@ -8,3 +8,8 @@
 @import '~admin-lte/dist/css/adminlte.min.css';
 
 @import '~ngx-toastr/toastr';
+
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
+}
