@@ -18,7 +18,7 @@ export class LoginComponent implements OnInit, OnDestroy {
   ) {}
 
   ngOnInit() {
-    this.renderer.addClass(document.body, 'login-page');
+    this.renderer.addClass(document.querySelector('app-root'), 'login-page');
     this.loginForm = new FormGroup({
       email: new FormControl(null, Validators.required),
       password: new FormControl(null, Validators.required),
@@ -34,6 +34,6 @@ export class LoginComponent implements OnInit, OnDestroy {
   }
 
   ngOnDestroy() {
-    this.renderer.removeClass(document.body, 'login-page');
+    this.renderer.removeClass(document.querySelector('app-root'), 'login-page');
   }
 }

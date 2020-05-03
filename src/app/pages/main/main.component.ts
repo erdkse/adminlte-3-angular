@@ -12,8 +12,11 @@ export class MainComponent implements OnInit {
   constructor(private renderer: Renderer2) {}
 
   ngOnInit() {
-    this.renderer.removeClass(document.body, 'login-page');
-    this.renderer.removeClass(document.body, 'register-page');
+    this.renderer.removeClass(document.querySelector('app-root'), 'login-page');
+    this.renderer.removeClass(
+      document.querySelector('app-root'),
+      'register-page'
+    );
   }
 
   mainSidebarHeight(height) {
@@ -27,12 +30,24 @@ export class MainComponent implements OnInit {
   toggleMenuSidebar() {
     console.log('sidebarMenuCollapsed', this.sidebarMenuOpened);
     if (this.sidebarMenuOpened) {
-      this.renderer.removeClass(document.body, 'sidebar-open');
-      this.renderer.addClass(document.body, 'sidebar-collapse');
+      this.renderer.removeClass(
+        document.querySelector('app-root'),
+        'sidebar-open'
+      );
+      this.renderer.addClass(
+        document.querySelector('app-root'),
+        'sidebar-collapse'
+      );
       this.sidebarMenuOpened = false;
     } else {
-      this.renderer.removeClass(document.body, 'sidebar-collapse');
-      this.renderer.addClass(document.body, 'sidebar-open');
+      this.renderer.removeClass(
+        document.querySelector('app-root'),
+        'sidebar-collapse'
+      );
+      this.renderer.addClass(
+        document.querySelector('app-root'),
+        'sidebar-open'
+      );
       this.sidebarMenuOpened = true;
     }
   }
