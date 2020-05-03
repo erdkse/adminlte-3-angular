@@ -17,7 +17,7 @@ export class RegisterComponent implements OnInit, OnDestroy {
   ) {}
 
   ngOnInit() {
-    this.renderer.addClass(document.body, 'register-page');
+    this.renderer.addClass(document.querySelector('app-root'), 'register-page');
     this.registerForm = new FormGroup({
       fullName: new FormControl(null, Validators.required),
       email: new FormControl(null, Validators.required),
@@ -35,6 +35,9 @@ export class RegisterComponent implements OnInit, OnDestroy {
   }
 
   ngOnDestroy() {
-    this.renderer.removeClass(document.body, 'login-page');
+    this.renderer.removeClass(
+      document.querySelector('app-root'),
+      'register-page'
+    );
   }
 }
