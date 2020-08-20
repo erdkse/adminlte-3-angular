@@ -1,3 +1,8 @@
+:host {
+  min-width: 100vw;
+  min-height: 100vh;
+}
+
 .content-wrapper {
   min-height: calc(100vh - 114px);
   height: 100%;
