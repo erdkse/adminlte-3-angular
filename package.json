@@ -26,7 +26,7 @@
     "core-js": "^2.5.4",
     "express": "^4.17.1",
     "ionicons": "2.0.1",
-    "ngx-toastr": "^10.2.0",
+    "ngx-toastr": "^13.0.0",
     "rxjs": "~6.5.5",
     "tslib": "^1.11.1",
     "zone.js": "~0.10.3"
