@@ -7,7 +7,8 @@
     "dev:build": "ng build --prod",
     "dev:test": "ng test",
     "dev:lint": "ng lint",
-    "dev:e2e": "ng e2e"
+    "dev:e2e": "ng e2e",
+    "postinstall": "ngcc"
   },
   "private": true,
   "dependencies": {
