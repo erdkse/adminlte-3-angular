@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { NotificationsDropdownMenuComponent } from './notifications-dropdown-menu.component';
 
@@ -6,11 +6,13 @@ describe('NotificationsDropdownMenuComponent', () => {
   let component: NotificationsDropdownMenuComponent;
   let fixture: ComponentFixture<NotificationsDropdownMenuComponent>;
 
-  beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      declarations: [NotificationsDropdownMenuComponent],
-    }).compileComponents();
-  }));
+  beforeEach(
+    waitForAsync(() => {
+      TestBed.configureTestingModule({
+        declarations: [NotificationsDropdownMenuComponent],
+      }).compileComponents();
+    })
+  );
 
   beforeEach(() => {
     fixture = TestBed.createComponent(NotificationsDropdownMenuComponent);
