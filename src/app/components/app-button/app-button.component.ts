@@ -1,21 +1,21 @@
-import { Component, OnInit, Input } from '@angular/core';
+import {Component, OnInit, Input} from '@angular/core';
 
 @Component({
-  selector: 'app-button',
-  templateUrl: './app-button.component.html',
-  styleUrls: ['./app-button.component.scss'],
+    selector: 'app-button',
+    templateUrl: './app-button.component.html',
+    styleUrls: ['./app-button.component.scss']
 })
 export class AppButtonComponent implements OnInit {
-  @Input() type: string = 'button';
-  @Input() block: boolean = false;
-  @Input() color: string = 'primary';
-  @Input() text: string = '';
-  @Input() disabled: boolean = false;
-  @Input() loading: boolean = false;
+    @Input() type: string = 'button';
+    @Input() block: boolean = false;
+    @Input() color: string = 'primary';
+    @Input() text: string = '';
+    @Input() disabled: boolean = false;
+    @Input() loading: boolean = false;
 
-  constructor() {}
+    constructor() {}
 
-  ngOnInit(): void {
-    this.disabled = this.disabled || this.loading;
-  }
+    ngOnInit(): void {
+        this.disabled = this.disabled || this.loading;
+    }
 }

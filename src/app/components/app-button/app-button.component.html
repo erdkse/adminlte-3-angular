@@ -1,14 +1,14 @@
 <button
-  [type]="type"
-  class="btn btn-{{ color }}"
-  [ngClass]="{ 'btn-block': block }"
-  [disabled]="disabled"
+    [type]="type"
+    class="btn btn-{{ color }}"
+    [ngClass]="{'btn-block': block}"
+    [disabled]="disabled"
 >
-  {{ text }}
-  <span
-    *ngIf="loading"
-    class="spinner-border spinner-border-sm"
-    role="status"
-    aria-hidden="true"
-  ></span>
+    {{ text }}
+    <span
+        *ngIf="loading"
+        class="spinner-border spinner-border-sm"
+        role="status"
+        aria-hidden="true"
+    ></span>
 </button>
