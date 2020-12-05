@@ -1,21 +1,18 @@
 import {
     Component,
-    OnInit,
-    ViewChild,
-    HostListener,
     ElementRef,
-    Renderer2
+    HostListener,
+    OnInit,
+    Renderer2,
+    ViewChild
 } from '@angular/core';
-import {AppService} from 'src/app/utils/services/app.service';
 
 @Component({
-    selector: 'app-user-dropdown-menu',
-    templateUrl: './user-dropdown-menu.component.html',
-    styleUrls: ['./user-dropdown-menu.component.scss']
+    selector: 'app-language-dropdown',
+    templateUrl: './language-dropdown.component.html',
+    styleUrls: ['./language-dropdown.component.scss']
 })
-export class UserDropdownMenuComponent implements OnInit {
-    public user;
-
+export class LanguageDropdownComponent implements OnInit {
     @ViewChild('dropdownMenu', {static: false}) dropdownMenu;
     @HostListener('document:click', ['$event'])
     clickout(event) {
@@ -23,16 +20,9 @@ export class UserDropdownMenuComponent implements OnInit {
             this.hideDropdownMenu();
         }
     }
+    constructor(private elementRef: ElementRef, private renderer: Renderer2) {}
 
-    constructor(
-        private elementRef: ElementRef,
-        private renderer: Renderer2,
-        private appService: AppService
-    ) {}
-
-    ngOnInit(): void {
-        this.user = this.appService.user;
-    }
+    ngOnInit(): void {}
 
     toggleDropdownMenu() {
         if (this.dropdownMenu.nativeElement.classList.contains('show')) {
@@ -48,9 +38,5 @@ export class UserDropdownMenuComponent implements OnInit {
 
     hideDropdownMenu() {
         this.renderer.removeClass(this.dropdownMenu.nativeElement, 'show');
-    }
-
-    logout() {
-        this.appService.logout();
     }
 }

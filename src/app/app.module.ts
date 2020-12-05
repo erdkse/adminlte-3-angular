@@ -25,6 +25,7 @@ import localeEn from '@angular/common/locales/en';
 import {UserDropdownMenuComponent} from './pages/main/header/user-dropdown-menu/user-dropdown-menu.component';
 import {ForgotPasswordComponent} from './pages/forgot-password/forgot-password.component';
 import {RecoverPasswordComponent} from './pages/recover-password/recover-password.component';
+import {LanguageDropdownComponent} from './pages/main/header/language-dropdown/language-dropdown.component';
 
 registerLocaleData(localeEn, 'en-EN');
 
@@ -45,7 +46,8 @@ registerLocaleData(localeEn, 'en-EN');
         AppButtonComponent,
         UserDropdownMenuComponent,
         ForgotPasswordComponent,
-        RecoverPasswordComponent
+        RecoverPasswordComponent,
+        LanguageDropdownComponent
     ],
     imports: [
         BrowserModule,
@@ -53,7 +55,7 @@ registerLocaleData(localeEn, 'en-EN');
         ReactiveFormsModule,
         BrowserAnimationsModule,
         ToastrModule.forRoot({
-            timeOut: 10000,
+            timeOut: 3000,
             positionClass: 'toast-bottom-right',
             preventDuplicates: true
         }),

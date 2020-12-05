@@ -1,26 +1,26 @@
-import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
+import {ComponentFixture, TestBed, waitForAsync} from '@angular/core/testing';
 
-import { UserDropdownMenuComponent } from './user-dropdown-menu.component';
+import {UserDropdownMenuComponent} from './user-dropdown-menu.component';
 
 describe('UserDropdownMenuComponent', () => {
-  let component: UserDropdownMenuComponent;
-  let fixture: ComponentFixture<UserDropdownMenuComponent>;
+    let component: UserDropdownMenuComponent;
+    let fixture: ComponentFixture<UserDropdownMenuComponent>;
 
-  beforeEach(
-    waitForAsync(() => {
-      TestBed.configureTestingModule({
-        declarations: [UserDropdownMenuComponent],
-      }).compileComponents();
-    })
-  );
+    beforeEach(
+        waitForAsync(() => {
+            TestBed.configureTestingModule({
+                declarations: [UserDropdownMenuComponent]
+            }).compileComponents();
+        })
+    );
 
-  beforeEach(() => {
-    fixture = TestBed.createComponent(UserDropdownMenuComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
+    beforeEach(() => {
+        fixture = TestBed.createComponent(UserDropdownMenuComponent);
+        component = fixture.componentInstance;
+        fixture.detectChanges();
+    });
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
+    it('should create', () => {
+        expect(component).toBeTruthy();
+    });
 });
