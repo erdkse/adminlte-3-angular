@@ -2,19 +2,20 @@ import {Injectable} from '@angular/core';
 import {
     CanActivate,
     CanActivateChild,
-    CanLoad,
     Route,
-    UrlSegment,
     ActivatedRouteSnapshot,
     RouterStateSnapshot,
-    UrlTree
+    UrlTree,
+    Router
 } from '@angular/router';
 import {Observable} from 'rxjs';
 
 @Injectable({
     providedIn: 'root'
 })
-export class NonAuthGuard implements CanActivate, CanActivateChild, CanLoad {
+export class NonAuthGuard implements CanActivate, CanActivateChild {
+    constructor(private router: Router) {}
+
     canActivate(
         next: ActivatedRouteSnapshot,
         state: RouterStateSnapshot
@@ -23,7 +24,11 @@ export class NonAuthGuard implements CanActivate, CanActivateChild, CanLoad {
         | Promise<boolean | UrlTree>
         | boolean
         | UrlTree {
-        return true;
+        if (!localStorage.getItem('token')) {
+            return true;
+        }
+        this.router.navigate(['/']);
+        return false;
     }
     canActivateChild(
         next: ActivatedRouteSnapshot,
@@ -33,12 +38,6 @@ export class NonAuthGuard implements CanActivate, CanActivateChild, CanLoad {
         | Promise<boolean | UrlTree>
         | boolean
         | UrlTree {
-        return true;
-    }
-    canLoad(
-        route: Route,
-        segments: UrlSegment[]
-    ): Observable<boolean> | Promise<boolean> | boolean {
-        return true;
+        return this.canActivate(next, state);
     }
 }

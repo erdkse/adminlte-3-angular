@@ -31,7 +31,6 @@ export class RecoverPasswordComponent implements OnInit, OnDestroy {
 
     recoverPassword() {
         if (this.recoverPasswordForm.valid) {
-            this.appService.login();
         } else {
             this.toastr.error('Hello world!', 'Toastr fun!');
         }

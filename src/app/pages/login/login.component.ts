@@ -28,9 +28,11 @@ export class LoginComponent implements OnInit, OnDestroy {
         });
     }
 
-    login() {
+    async login() {
         if (this.loginForm.valid) {
-            this.appService.login();
+            this.isAuthLoading = true;
+            await this.appService.login(this.loginForm.value);
+            this.isAuthLoading = false;
         } else {
             this.toastr.error('Hello world!', 'Toastr fun!');
         }

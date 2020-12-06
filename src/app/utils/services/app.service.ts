@@ -1,6 +1,8 @@
 import {Injectable} from '@angular/core';
 import {Router} from '@angular/router';
-import {gk} from 'gatekeeper-client-sdk';
+import {ToastrService} from 'ngx-toastr';
+
+import gk from 'gatekeeper-client-sdk';
 
 @Injectable({
     providedIn: 'root'
@@ -12,16 +14,26 @@ export class AppService {
         image: 'assets/img/user2-160x160.jpg'
     };
 
-    constructor(private router: Router) {}
+    constructor(private router: Router, private toastr: ToastrService) {}
 
-    login() {
-        localStorage.setItem('token', 'LOGGED_IN');
-        this.router.navigate(['/']);
+    async login({email, password}) {
+        try {
+            const token = await gk.loginByAuth(email, password);
+            localStorage.setItem('token', token);
+            this.router.navigate(['/']);
+        } catch (error) {
+            this.toastr.error(error.message);
+        }
     }
 
-    register() {
-        localStorage.setItem('token', 'LOGGED_IN');
-        this.router.navigate(['/']);
+    async register({email, password}) {
+        try {
+            const token = await gk.registerByAuth(email, password);
+            localStorage.setItem('token', token);
+            this.router.navigate(['/']);
+        } catch (error) {
+            this.toastr.error(error.message);
+        }
     }
 
     logout() {

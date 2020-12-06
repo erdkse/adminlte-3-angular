@@ -22,16 +22,23 @@ export class RegisterComponent implements OnInit, OnDestroy {
             'register-page'
         );
         this.registerForm = new FormGroup({
-            fullName: new FormControl(null, Validators.required),
             email: new FormControl(null, Validators.required),
-            password: new FormControl(null, Validators.required),
-            retypePassword: new FormControl(null, Validators.required)
+            password: new FormControl(null, [
+                Validators.required,
+                Validators.min(5),
+                Validators.max(30)
+            ]),
+            retypePassword: new FormControl(null, [
+                Validators.required,
+                Validators.min(5),
+                Validators.max(30)
+            ])
         });
     }
 
     register() {
         if (this.registerForm.valid) {
-            this.appService.register();
+            this.appService.register(this.registerForm.value);
         } else {
             this.toastr.error('Hello world!', 'Toastr fun!');
         }

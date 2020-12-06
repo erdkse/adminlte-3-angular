@@ -9,19 +9,6 @@
             <form [formGroup]="registerForm" (ngSubmit)="register()">
                 <div class="input-group mb-3">
                     <input
-                        formControlName="fullName"
-                        type="text"
-                        class="form-control"
-                        placeholder="Full name"
-                    />
-                    <div class="input-group-append">
-                        <div class="input-group-text">
-                            <span class="fas fa-user"></span>
-                        </div>
-                    </div>
-                </div>
-                <div class="input-group mb-3">
-                    <input
                         formControlName="email"
                         type="email"
                         class="form-control"
