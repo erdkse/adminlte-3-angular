@@ -1,15 +1,15 @@
 import {NgModule} from '@angular/core';
 import {Routes, RouterModule} from '@angular/router';
-import {MainComponent} from './pages/main/main.component';
-import {BlankComponent} from './views/blank/blank.component';
-import {LoginComponent} from './pages/login/login.component';
-import {ProfileComponent} from './views/profile/profile.component';
-import {RegisterComponent} from './pages/register/register.component';
-import {DashboardComponent} from './views/dashboard/dashboard.component';
-import {AuthGuard} from './utils/guards/auth.guard';
-import {NonAuthGuard} from './utils/guards/non-auth.guard';
-import {ForgotPasswordComponent} from './pages/forgot-password/forgot-password.component';
-import {RecoverPasswordComponent} from './pages/recover-password/recover-password.component';
+import {MainComponent} from '@modules/main/main.component';
+import {BlankComponent} from '@pages/blank/blank.component';
+import {LoginComponent} from '@modules/login/login.component';
+import {ProfileComponent} from '@pages/profile/profile.component';
+import {RegisterComponent} from '@modules/register/register.component';
+import {DashboardComponent} from '@pages/dashboard/dashboard.component';
+import {AuthGuard} from '@guards/auth.guard';
+import {NonAuthGuard} from '@guards/non-auth.guard';
+import {ForgotPasswordComponent} from '@modules/forgot-password/forgot-password.component';
+import {RecoverPasswordComponent} from '@modules/recover-password/recover-password.component';
 
 const routes: Routes = [
     {

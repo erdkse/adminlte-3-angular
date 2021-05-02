@@ -1,7 +1,7 @@
 {
     "compileOnSave": false,
     "compilerOptions": {
-        "baseUrl": "./",
+        "baseUrl": "./src",
         "outDir": "./dist/out-tsc",
         "sourceMap": true,
         "declaration": false,
@@ -13,7 +13,15 @@
         "target": "es2015",
         "lib": ["es2018", "dom"],
         "resolveJsonModule": true,
-        "esModuleInterop": true
+        "esModuleInterop": true,
+        "paths": {
+            "@components/*": ["app/components/*"],
+            "@guards/*": ["app/guards/*"],
+            "@modules/*": ["app/modules/*"],
+            "@pages/*": ["app/pages/*"],
+            "@services/*": ["app/services/*"],
+            "@/*": ["app/*"]
+        }
     },
     "angularCompilerOptions": {
         "fullTemplateTypeCheck": true,
