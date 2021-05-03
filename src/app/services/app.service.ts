@@ -57,6 +57,8 @@ export class AppService {
 
     logout() {
         localStorage.removeItem('token');
+        localStorage.removeItem('gatekeeper_token');
+        this.user = null;
         this.router.navigate(['/login']);
     }
 }
