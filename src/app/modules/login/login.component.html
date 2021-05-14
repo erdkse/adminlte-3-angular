@@ -46,6 +46,7 @@
                             [type]="'submit'"
                             [block]="true"
                             [loading]="isAuthLoading"
+                            [disabled]="isFacebookLoading || isGoogleLoading"
                         >
                             Sign In
                         </app-button>
@@ -58,7 +59,8 @@
                 <app-button
                     class="mb-2"
                     [block]="true"
-                    [loading]="isAuthLoading"
+                    [loading]="isFacebookLoading"
+                    [disabled]="isAuthLoading || isGoogleLoading"
                     [icon]="'facebook'"
                     (click)="loginByFacebook()"
                 >
@@ -66,7 +68,8 @@
                 </app-button>
                 <app-button
                     [block]="true"
-                    [loading]="isAuthLoading"
+                    [loading]="isGoogleLoading"
+                    [disabled]="isAuthLoading || isFacebookLoading"
                     [icon]="'google'"
                     [color]="'danger'"
                     (click)="loginByGoogle()"
