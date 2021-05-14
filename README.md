@@ -1,8 +1,11 @@
 [![Run on Repl.it](https://repl.it/badge/github/erdkse/adminlte-3-angular)](https://repl.it/github/erdkse/adminlte-3-angular)
 
-# AdminLTE 3
+# Admin LTE 3.1.0 - Angular 12.0.0
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.3.
+To login website use:
+
+`username:` admin@example.com<br />
+`password:` admin<br />
 
 ## Development server
 
