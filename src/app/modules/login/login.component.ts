@@ -11,6 +11,9 @@ import {AppService} from '@services/app.service';
 export class LoginComponent implements OnInit, OnDestroy {
     public loginForm: FormGroup;
     public isAuthLoading = false;
+    public isGoogleLoading = false;
+    public isFacebookLoading = false;
+
     constructor(
         private renderer: Renderer2,
         private toastr: ToastrService,
@@ -28,14 +31,26 @@ export class LoginComponent implements OnInit, OnDestroy {
         });
     }
 
-    async login() {
+    async loginByAuth() {
         if (this.loginForm.valid) {
             this.isAuthLoading = true;
-            await this.appService.login(this.loginForm.value);
+            await this.appService.loginByAuth(this.loginForm.value);
             this.isAuthLoading = false;
         } else {
-            this.toastr.error('Hello world!', 'Toastr fun!');
+            this.toastr.error('Form is not valid!');
         }
+    }
+
+    async loginByGoogle() {
+        this.isGoogleLoading = true;
+        await this.appService.loginByGoogle();
+        this.isGoogleLoading = false;
+    }
+
+    async loginByFacebook() {
+        this.isFacebookLoading = true;
+        await this.appService.loginByFacebook();
+        this.isFacebookLoading = false;
     }
 
     ngOnDestroy() {

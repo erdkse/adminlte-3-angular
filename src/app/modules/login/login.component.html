@@ -6,7 +6,7 @@
         <div class="card-body">
             <p class="login-box-msg">Sign in to start your session</p>
 
-            <form [formGroup]="loginForm" (ngSubmit)="login()">
+            <form [formGroup]="loginForm" (ngSubmit)="loginByAuth()">
                 <div class="input-group mb-3">
                     <input
                         formControlName="email"
@@ -34,35 +34,46 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-8">
+                    <div class="col-7">
                         <div class="icheck-primary">
                             <input type="checkbox" id="remember" />
                             <label for="remember"> Remember Me </label>
                         </div>
                     </div>
                     <!-- /.col -->
-                    <div class="col-4">
+                    <div class="col-5">
                         <app-button
                             [type]="'submit'"
                             [block]="true"
-                            [text]="'Sign In'"
                             [loading]="isAuthLoading"
-                        ></app-button>
+                        >
+                            Sign In
+                        </app-button>
                     </div>
                     <!-- /.col -->
                 </div>
             </form>
 
             <div class="social-auth-links text-center mb-3">
-                <a href="#" class="btn btn-block btn-primary">
-                    <i class="fab fa-facebook mr-2"></i> Sign in using Facebook
-                </a>
-                <a href="#" class="btn btn-block btn-danger">
-                    <i class="fab fa-google-plus mr-2"></i> Sign in using
-                    Google+
-                </a>
+                <app-button
+                    class="mb-2"
+                    [block]="true"
+                    [loading]="isAuthLoading"
+                    [icon]="'facebook'"
+                    (click)="loginByFacebook()"
+                >
+                    Sign in using Facebook
+                </app-button>
+                <app-button
+                    [block]="true"
+                    [loading]="isAuthLoading"
+                    [icon]="'google'"
+                    [color]="'danger'"
+                    (click)="loginByGoogle()"
+                >
+                    Sign in using Google+
+                </app-button>
             </div>
-            <!-- /.social-auth-links -->
 
             <p class="mb-1">
                 <a [routerLink]="['/forgot-password']">I forgot my password</a>

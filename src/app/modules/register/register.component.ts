@@ -10,6 +10,10 @@ import {ToastrService} from 'ngx-toastr';
 })
 export class RegisterComponent implements OnInit, OnDestroy {
     public registerForm: FormGroup;
+    public isAuthLoading = false;
+    public isGoogleLoading = false;
+    public isFacebookLoading = false;
+
     constructor(
         private renderer: Renderer2,
         private toastr: ToastrService,
@@ -28,12 +32,26 @@ export class RegisterComponent implements OnInit, OnDestroy {
         });
     }
 
-    register() {
+    async registerByAuth() {
         if (this.registerForm.valid) {
-            this.appService.register(this.registerForm.value);
+            this.isAuthLoading = true;
+            await this.appService.registerByAuth(this.registerForm.value);
+            this.isAuthLoading = false;
         } else {
-            this.toastr.error('Hello world!', 'Toastr fun!');
+            this.toastr.error('Form is not valid!');
         }
+    }
+
+    async registerByGoogle() {
+        this.isGoogleLoading = true;
+        await this.appService.registerByGoogle();
+        this.isGoogleLoading = false;
+    }
+
+    async registerByFacebook() {
+        this.isFacebookLoading = true;
+        await this.appService.registerByFacebook();
+        this.isFacebookLoading = false;
     }
 
     ngOnDestroy() {

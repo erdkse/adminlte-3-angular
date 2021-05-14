@@ -11,20 +11,22 @@ export class AppService {
 
     constructor(private router: Router, private toastr: ToastrService) {}
 
-    async login({email, password}) {
+    async loginByAuth({email, password}) {
         try {
             const token = await Gatekeeper.loginByAuth(email, password);
             localStorage.setItem('token', token);
+            await this.getProfile();
             this.router.navigate(['/']);
         } catch (error) {
             this.toastr.error(error.response.data.message);
         }
     }
 
-    async register({email, password}) {
+    async registerByAuth({email, password}) {
         try {
             const token = await Gatekeeper.registerByAuth(email, password);
             localStorage.setItem('token', token);
+            await this.getProfile();
             this.router.navigate(['/']);
         } catch (error) {
             this.toastr.error(error.response.data.message);
@@ -35,16 +37,40 @@ export class AppService {
         try {
             const token = await Gatekeeper.loginByGoogle();
             localStorage.setItem('token', token);
+            await this.getProfile();
             this.router.navigate(['/']);
         } catch (error) {
             this.toastr.error(error.response.data.message);
         }
     }
 
-    async registerByGoogle({email, password}) {
+    async registerByGoogle() {
         try {
             const token = await Gatekeeper.registerByGoogle();
             localStorage.setItem('token', token);
+            await this.getProfile();
+            this.router.navigate(['/']);
+        } catch (error) {
+            this.toastr.error(error.response.data.message);
+        }
+    }
+
+    async loginByFacebook() {
+        try {
+            const token = await Gatekeeper.loginByFacebook();
+            localStorage.setItem('token', token);
+            await this.getProfile();
+            this.router.navigate(['/']);
+        } catch (error) {
+            this.toastr.error(error.response.data.message);
+        }
+    }
+
+    async registerByFacebook() {
+        try {
+            const token = await Gatekeeper.registerByFacebook();
+            localStorage.setItem('token', token);
+            await this.getProfile();
             this.router.navigate(['/']);
         } catch (error) {
             this.toastr.error(error.response.data.message);

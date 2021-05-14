@@ -6,7 +6,7 @@
         <div class="card-body">
             <p class="login-box-msg">Register a new membership</p>
 
-            <form [formGroup]="registerForm" (ngSubmit)="register()">
+            <form [formGroup]="registerForm" (ngSubmit)="registerByAuth()">
                 <div class="input-group mb-3">
                     <input
                         formControlName="email"
@@ -47,7 +47,7 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-8">
+                    <div class="col-7">
                         <div class="icheck-primary">
                             <input
                                 type="checkbox"
@@ -61,28 +61,45 @@
                         </div>
                     </div>
                     <!-- /.col -->
-                    <div class="col-4">
-                        <button type="submit" class="btn btn-primary btn-block">
+                    <div class="col-5">
+                        <app-button
+                            [type]="'submit'"
+                            [block]="true"
+                            [loading]="isAuthLoading"
+                            [disabled]="isFacebookLoading || isGoogleLoading"
+                        >
                             Register
-                        </button>
+                        </app-button>
                     </div>
                     <!-- /.col -->
                 </div>
             </form>
 
             <div class="social-auth-links text-center">
-                <a href="#" class="btn btn-block btn-primary">
-                    <i class="fab fa-facebook mr-2"></i>
+                <app-button
+                    class="mb-2"
+                    [block]="true"
+                    [loading]="isFacebookLoading"
+                    [disabled]="isAuthLoading || isGoogleLoading"
+                    [icon]="'facebook'"
+                    (click)="registerByFacebook()"
+                >
                     Sign up using Facebook
-                </a>
-                <a href="#" class="btn btn-block btn-danger">
-                    <i class="fab fa-google-plus mr-2"></i>
+                </app-button>
+                <app-button
+                    [block]="true"
+                    [loading]="isGoogleLoading"
+                    [disabled]="isAuthLoading || isFacebookLoading"
+                    [icon]="'google'"
+                    [color]="'danger'"
+                    (click)="registerByGoogle()"
+                >
                     Sign up using Google+
-                </a>
+                </app-button>
             </div>
 
-            <a [routerLink]="['/login']" class="text-center"
-                >I already have a membership</a
+            <a [routerLink]="['/login']" class="text-center">
+                I already have a membership</a
             >
         </div>
         <!-- /.form-box -->
