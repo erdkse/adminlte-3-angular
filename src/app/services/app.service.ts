@@ -17,7 +17,7 @@ export class AppService {
             localStorage.setItem('token', token);
             this.router.navigate(['/']);
         } catch (error) {
-            this.toastr.error(error.message);
+            this.toastr.error(error.response.data.message);
         }
     }
 
@@ -27,7 +27,7 @@ export class AppService {
             localStorage.setItem('token', token);
             this.router.navigate(['/']);
         } catch (error) {
-            this.toastr.error(error.message);
+            this.toastr.error(error.response.data.message);
         }
     }
 
@@ -37,7 +37,7 @@ export class AppService {
             localStorage.setItem('token', token);
             this.router.navigate(['/']);
         } catch (error) {
-            this.toastr.error(error.message);
+            this.toastr.error(error.response.data.message);
         }
     }
 
@@ -47,12 +47,17 @@ export class AppService {
             localStorage.setItem('token', token);
             this.router.navigate(['/']);
         } catch (error) {
-            this.toastr.error(error.message);
+            this.toastr.error(error.response.data.message);
         }
     }
 
     async getProfile() {
-        this.user = await Gatekeeper.getProfile();
+        try {
+            this.user = await Gatekeeper.getProfile();
+        } catch (error) {
+            this.logout();
+            throw error;
+        }
     }
 
     logout() {

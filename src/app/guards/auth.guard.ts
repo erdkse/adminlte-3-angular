@@ -47,7 +47,6 @@ export class AuthGuard implements CanActivate, CanActivateChild {
             await this.appService.getProfile();
             return true;
         } catch (error) {
-            this.router.navigate(['/login']);
             return false;
         }
     }

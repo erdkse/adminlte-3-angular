@@ -27,6 +27,7 @@ import {UserDropdownMenuComponent} from '@modules/main/header/user-dropdown-menu
 import {ForgotPasswordComponent} from '@modules/forgot-password/forgot-password.component';
 import {RecoverPasswordComponent} from '@modules/recover-password/recover-password.component';
 import {LanguageDropdownComponent} from '@modules/main/header/language-dropdown/language-dropdown.component';
+import {PrivacyPolicyComponent} from './modules/privacy-policy/privacy-policy.component';
 
 registerLocaleData(localeEn, 'en-EN');
 
@@ -48,7 +49,8 @@ registerLocaleData(localeEn, 'en-EN');
         UserDropdownMenuComponent,
         ForgotPasswordComponent,
         RecoverPasswordComponent,
-        LanguageDropdownComponent
+        LanguageDropdownComponent,
+        PrivacyPolicyComponent
     ],
     imports: [
         BrowserModule,

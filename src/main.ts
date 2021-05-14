@@ -9,9 +9,10 @@ if (environment.production) {
     enableProdMode();
 }
 
-Gatekeeper.configure('10fb0126-384b-40b6-8945-cb7c249b4937', {
+Gatekeeper.configure('9966bf1b-5da5-4b55-9301-86f9f0c77aaf', {
     googleClientID:
-        '816324818723-e2hokn0pvjgkf8jcks6quido903ukeri.apps.googleusercontent.com'
+        '816324818723-e2hokn0pvjgkf8jcks6quido903ukeri.apps.googleusercontent.com',
+    facebookAppID: '489915919118075'
 });
 
 platformBrowserDynamic()
