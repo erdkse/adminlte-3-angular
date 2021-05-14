@@ -18,7 +18,6 @@ import {DashboardComponent} from '@pages/dashboard/dashboard.component';
 import {ToastrModule} from 'ngx-toastr';
 import {MessagesDropdownMenuComponent} from '@modules/main/header/messages-dropdown-menu/messages-dropdown-menu.component';
 import {NotificationsDropdownMenuComponent} from '@modules/main/header/notifications-dropdown-menu/notifications-dropdown-menu.component';
-import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import {AppButtonComponent} from './components/app-button/app-button.component';
 
 import {registerLocaleData} from '@angular/common';
@@ -62,8 +61,7 @@ registerLocaleData(localeEn, 'en-EN');
             timeOut: 3000,
             positionClass: 'toast-bottom-right',
             preventDuplicates: true
-        }),
-        NgbModule
+        })
     ],
     providers: [],
     bootstrap: [AppComponent]
