@@ -2,18 +2,17 @@
     "name": "adminlte",
     "version": "0.1.0",
     "scripts": {
-        "start": "node server.js",
-        "dev:start": "ng serve",
-        "dev:build": "ng build --configuration production",
-        "dev:test": "ng test",
-        "dev:lint": "ng lint",
-        "dev:e2e": "ng e2e",
+        "start": "ng serve",
+        "build": "ng build --configuration production",
+        "test": "ng test",
+        "lint": "ng lint",
+        "e2e": "ng e2e",
         "postinstall": "ngcc"
     },
     "private": true,
     "lint-staged": {
         "src/**/*.{ts,tsx}": [
-            "node ng-lint-staged.js dev:lint",
+            "node ng-lint-staged.js lint",
             "prettier --write"
         ]
     },
