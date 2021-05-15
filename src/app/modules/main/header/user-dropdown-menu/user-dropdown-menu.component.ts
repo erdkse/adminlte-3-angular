@@ -7,6 +7,7 @@ import {
     Renderer2
 } from '@angular/core';
 import {AppService} from '@services/app.service';
+import {DateTime} from 'luxon';
 
 @Component({
     selector: 'app-user-dropdown-menu',
@@ -52,5 +53,9 @@ export class UserDropdownMenuComponent implements OnInit {
 
     logout() {
         this.appService.logout();
+    }
+
+    formatDate(date) {
+        return DateTime.fromISO(date).toFormat('dd LLL yyyy');
     }
 }

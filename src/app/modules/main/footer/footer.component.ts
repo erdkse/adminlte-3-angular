@@ -1,4 +1,5 @@
 import {Component} from '@angular/core';
+import {DateTime} from 'luxon';
 import packageInfo from './../../../../../package.json';
 
 @Component({
@@ -8,4 +9,5 @@ import packageInfo from './../../../../../package.json';
 })
 export class FooterComponent {
     public appVersion = packageInfo.version;
+    public currentYear: string = DateTime.now().toFormat('y');
 }
