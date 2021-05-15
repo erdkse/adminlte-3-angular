@@ -1,4 +1,10 @@
-import {Component, OnInit, OnDestroy, Renderer2} from '@angular/core';
+import {
+    Component,
+    OnInit,
+    OnDestroy,
+    Renderer2,
+    HostBinding
+} from '@angular/core';
 import {FormGroup, FormControl, Validators} from '@angular/forms';
 import {ToastrService} from 'ngx-toastr';
 import {AppService} from '@services/app.service';
@@ -9,6 +15,7 @@ import {AppService} from '@services/app.service';
     styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit, OnDestroy {
+    @HostBinding('class') class = 'login-box';
     public loginForm: FormGroup;
     public isAuthLoading = false;
     public isGoogleLoading = false;

@@ -1,4 +1,10 @@
-import {Component, OnDestroy, OnInit, Renderer2} from '@angular/core';
+import {
+    Component,
+    HostBinding,
+    OnDestroy,
+    OnInit,
+    Renderer2
+} from '@angular/core';
 import {FormControl, FormGroup, Validators} from '@angular/forms';
 import {ToastrService} from 'ngx-toastr';
 import {AppService} from '@services/app.service';
@@ -9,6 +15,7 @@ import {AppService} from '@services/app.service';
     styleUrls: ['./forgot-password.component.scss']
 })
 export class ForgotPasswordComponent implements OnInit, OnDestroy {
+    @HostBinding('class') class = 'login-box';
     public forgotPasswordForm: FormGroup;
     public isAuthLoading = false;
 

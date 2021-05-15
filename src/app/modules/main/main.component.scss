@@ -1,9 +1,7 @@
 :host {
-    min-width: 100vw;
-    min-height: 100vh;
+    display: block;
 }
 
-.content-wrapper {
-    min-height: calc(100vh - 114px);
-    height: 100%;
+.content-wrapper > *:first-child {
+    display: block;
 }

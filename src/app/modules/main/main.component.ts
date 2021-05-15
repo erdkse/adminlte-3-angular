@@ -1,4 +1,4 @@
-import {Component, OnInit, Renderer2, ViewChild} from '@angular/core';
+import {Component, HostBinding, OnInit, Renderer2} from '@angular/core';
 import {AppService} from '@services/app.service';
 
 @Component({
@@ -7,8 +7,8 @@ import {AppService} from '@services/app.service';
     styleUrls: ['./main.component.scss']
 })
 export class MainComponent implements OnInit {
+    @HostBinding('class') class = 'wrapper';
     public sidebarMenuOpened = true;
-    @ViewChild('contentWrapper', {static: false}) contentWrapper;
 
     constructor(private renderer: Renderer2, private appService: AppService) {}
 
@@ -21,14 +21,6 @@ export class MainComponent implements OnInit {
             document.querySelector('app-root'),
             'register-page'
         );
-    }
-
-    mainSidebarHeight(height) {
-        // this.renderer.setStyle(
-        //   this.contentWrapper.nativeElement,
-        //   'min-height',
-        //   height - 114 + 'px'
-        // );
     }
 
     toggleMenuSidebar() {

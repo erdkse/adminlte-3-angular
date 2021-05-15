@@ -1,4 +1,4 @@
-.main-sidebar {
-    height: 100vh;
-    overflow: scroll;
+:host {
+    display: block;
+    transition: width ease-in-out 0.3s;
 }

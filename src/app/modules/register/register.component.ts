@@ -1,4 +1,10 @@
-import {Component, OnInit, Renderer2, OnDestroy} from '@angular/core';
+import {
+    Component,
+    OnInit,
+    Renderer2,
+    OnDestroy,
+    HostBinding
+} from '@angular/core';
 import {FormGroup, FormControl, Validators} from '@angular/forms';
 import {AppService} from '@services/app.service';
 import {ToastrService} from 'ngx-toastr';
@@ -9,6 +15,8 @@ import {ToastrService} from 'ngx-toastr';
     styleUrls: ['./register.component.scss']
 })
 export class RegisterComponent implements OnInit, OnDestroy {
+    @HostBinding('class') class = 'register-box';
+
     public registerForm: FormGroup;
     public isAuthLoading = false;
     public isGoogleLoading = false;
