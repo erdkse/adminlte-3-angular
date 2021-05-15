@@ -1,6 +1,5 @@
 import {
     Component,
-    OnInit,
     HostListener,
     ElementRef,
     ViewChild,
@@ -12,7 +11,7 @@ import {
     templateUrl: './messages-dropdown-menu.component.html',
     styleUrls: ['./messages-dropdown-menu.component.scss']
 })
-export class MessagesDropdownMenuComponent implements OnInit {
+export class MessagesDropdownMenuComponent {
     @ViewChild('dropdownMenu', {static: false}) dropdownMenu;
 
     @HostListener('document:click', ['$event'])
@@ -23,8 +22,6 @@ export class MessagesDropdownMenuComponent implements OnInit {
     }
 
     constructor(private elementRef: ElementRef, private renderer: Renderer2) {}
-
-    ngOnInit() {}
 
     toggleDropdownMenu() {
         if (this.dropdownMenu.nativeElement.classList.contains('show')) {

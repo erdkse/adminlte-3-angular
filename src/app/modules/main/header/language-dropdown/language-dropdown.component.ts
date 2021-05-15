@@ -2,7 +2,6 @@ import {
     Component,
     ElementRef,
     HostListener,
-    OnInit,
     Renderer2,
     ViewChild
 } from '@angular/core';
@@ -12,7 +11,7 @@ import {
     templateUrl: './language-dropdown.component.html',
     styleUrls: ['./language-dropdown.component.scss']
 })
-export class LanguageDropdownComponent implements OnInit {
+export class LanguageDropdownComponent {
     @ViewChild('dropdownMenu', {static: false}) dropdownMenu;
     @HostListener('document:click', ['$event'])
     clickout(event) {
@@ -21,8 +20,6 @@ export class LanguageDropdownComponent implements OnInit {
         }
     }
     constructor(private elementRef: ElementRef, private renderer: Renderer2) {}
-
-    ngOnInit(): void {}
 
     toggleDropdownMenu() {
         if (this.dropdownMenu.nativeElement.classList.contains('show')) {

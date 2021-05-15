@@ -1,13 +1,8 @@
-import {Component, OnInit} from '@angular/core';
-import {AppService} from '@services/app.service';
+import {Component} from '@angular/core';
 
 @Component({
     selector: 'app-profile',
     templateUrl: './profile.component.html',
     styleUrls: ['./profile.component.scss']
 })
-export class ProfileComponent implements OnInit {
-    constructor(public appService: AppService) {}
-
-    ngOnInit() {}
-}
+export class ProfileComponent {}

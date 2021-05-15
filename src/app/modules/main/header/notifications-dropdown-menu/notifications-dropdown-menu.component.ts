@@ -1,18 +1,16 @@
 import {
     Component,
-    OnInit,
     ViewChild,
     HostListener,
     ElementRef,
     Renderer2
 } from '@angular/core';
-
 @Component({
     selector: 'app-notifications-dropdown-menu',
     templateUrl: './notifications-dropdown-menu.component.html',
     styleUrls: ['./notifications-dropdown-menu.component.scss']
 })
-export class NotificationsDropdownMenuComponent implements OnInit {
+export class NotificationsDropdownMenuComponent {
     @ViewChild('dropdownMenu', {static: false}) dropdownMenu;
 
     @HostListener('document:click', ['$event'])
@@ -23,8 +21,6 @@ export class NotificationsDropdownMenuComponent implements OnInit {
     }
 
     constructor(private elementRef: ElementRef, private renderer: Renderer2) {}
-
-    ngOnInit() {}
 
     toggleDropdownMenu() {
         if (this.dropdownMenu.nativeElement.classList.contains('show')) {
