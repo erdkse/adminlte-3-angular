@@ -1,7 +1,4 @@
 [![Run on Repl.it](https://repl.it/badge/github/erdkse/adminlte-3-angular)](https://repl.it/github/erdkse/adminlte-3-angular)
-<a href="https://trackgit.com">
-<img src="https://us-central1-trackgit-analytics.cloudfunctions.net/token/ping/kpmqltb0l9ikrpx2b9kp" alt="trackgit-views" />
-</a>
 
 # Admin LTE 3.1.0 - Angular 12.0.0
 
