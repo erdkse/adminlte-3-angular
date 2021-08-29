@@ -1,76 +1,76 @@
 {
-    "name": "adminlte",
-    "version": "0.1.0",
-    "scripts": {
-        "start": "ng serve",
-        "build": "ng build --configuration production",
-        "test": "ng test",
-        "lint": "ng lint",
-        "e2e": "ng e2e",
-        "update": "ng update @angular/cli @angular/core",
-        "postinstall": "ngcc"
-    },
-    "private": true,
-    "lint-staged": {
-        "src/**/*.{ts,tsx}": [
-            "prettier --write"
-        ]
-    },
-    "husky": {
-        "hooks": {
-            "pre-commit": "pretty-quick --staged && ng lint && lint-staged"
-        }
-    },
-    "dependencies": {
-        "@angular/animations": "12.0.2",
-        "@angular/common": "12.0.2",
-        "@angular/compiler": "12.0.2",
-        "@angular/core": "12.0.2",
-        "@angular/forms": "12.0.2",
-        "@angular/localize": "12.0.2",
-        "@angular/platform-browser": "12.0.2",
-        "@angular/platform-browser-dynamic": "12.0.2",
-        "@angular/router": "12.0.2",
-        "core-js": "3.8.0",
-        "gatekeeper-client-sdk": "0.2.1",
-        "luxon": "^1.27.0",
-        "ngx-toastr": "14.0.0",
-        "rxjs": "6.6.7",
-        "tslib": "^2.0.3",
-        "zone.js": "~0.11.4"
-    },
-    "devDependencies": {
-        "@angular-devkit/build-angular": "12.0.2",
-        "@angular-eslint/builder": "12.0.0",
-        "@angular-eslint/eslint-plugin": "12.0.0",
-        "@angular-eslint/eslint-plugin-template": "12.0.0",
-        "@angular-eslint/schematics": "12.0.0",
-        "@angular-eslint/template-parser": "12.0.0",
-        "@angular/cli": "12.0.2",
-        "@angular/compiler-cli": "12.0.2",
-        "@angular/language-service": "12.0.2",
-        "@types/jasmine": "~3.6.2",
-        "@types/jasminewd2": "2.0.8",
-        "@types/node": "14.14.10",
-        "@typescript-eslint/eslint-plugin": "4.23.0",
-        "@typescript-eslint/parser": "4.23.0",
-        "admin-lte": "3.1.0",
-        "eslint": "7.27.0",
-        "husky": "6.0.0",
-        "jasmine-core": "~3.9.0",
-        "jasmine-spec-reporter": "~6.0.0",
-        "karma": "6.3.2",
-        "karma-chrome-launcher": "~3.1.0",
-        "karma-coverage-istanbul-reporter": "3.0.3",
-        "karma-jasmine": "~4.0.1",
-        "karma-jasmine-html-reporter": "^1.7.0",
-        "lint-staged": "11.0.0",
-        "prettier": "2.3.0",
-        "pretty-quick": "3.1.0",
-        "protractor": "7.0.0",
-        "ts-node": "9.1.0",
-        "tslint-config-prettier": "1.18.0",
-        "tslint-plugin-prettier": "2.3.0",
-        "typescript": "4.2.4"
+  "name": "adminlte",
+  "version": "0.1.0",
+  "scripts": {
+    "start": "ng serve",
+    "build": "ng build --configuration production",
+    "test": "ng test",
+    "lint": "ng lint",
+    "e2e": "ng e2e",
+    "update": "ng update @angular/cli @angular/core",
+    "postinstall": "ngcc"
+  },
+  "private": true,
+  "lint-staged": {
+    "src/**/*.{ts,tsx}": [
+      "prettier --write"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged && ng lint && lint-staged"
     }
+  },
+  "dependencies": {
+    "@angular/animations": "12.2.3",
+    "@angular/common": "12.2.3",
+    "@angular/compiler": "12.2.3",
+    "@angular/core": "12.2.3",
+    "@angular/forms": "12.2.3",
+    "@angular/localize": "12.2.3",
+    "@angular/platform-browser": "12.2.3",
+    "@angular/platform-browser-dynamic": "12.2.3",
+    "@angular/router": "12.2.3",
+    "core-js": "3.8.0",
+    "gatekeeper-client-sdk": "0.2.1",
+    "luxon": "^2.0.2",
+    "ngx-toastr": "14.1.0",
+    "rxjs": "6.6.7",
+    "tslib": "^2.0.3",
+    "zone.js": "~0.11.4"
+  },
+  "devDependencies": {
+    "@angular-devkit/build-angular": "12.2.3",
+    "@angular-eslint/builder": "12.0.0",
+    "@angular-eslint/eslint-plugin": "12.0.0",
+    "@angular-eslint/eslint-plugin-template": "12.0.0",
+    "@angular-eslint/schematics": "12.0.0",
+    "@angular-eslint/template-parser": "12.0.0",
+    "@angular/cli": "12.2.3",
+    "@angular/compiler-cli": "12.2.3",
+    "@angular/language-service": "12.2.3",
+    "@types/jasmine": "~3.6.2",
+    "@types/jasminewd2": "2.0.8",
+    "@types/node": "14.14.10",
+    "@typescript-eslint/eslint-plugin": "4.23.0",
+    "@typescript-eslint/parser": "4.23.0",
+    "admin-lte": "3.1.0",
+    "eslint": "7.32.0",
+    "husky": "7.0.2",
+    "jasmine-core": "~3.9.0",
+    "jasmine-spec-reporter": "~6.0.0",
+    "karma": "6.3.2",
+    "karma-chrome-launcher": "~3.1.0",
+    "karma-coverage-istanbul-reporter": "3.0.3",
+    "karma-jasmine": "~4.0.1",
+    "karma-jasmine-html-reporter": "^1.7.0",
+    "lint-staged": "11.1.2",
+    "prettier": "2.3.2",
+    "pretty-quick": "3.1.1",
+    "protractor": "7.0.0",
+    "ts-node": "9.1.0",
+    "tslint-config-prettier": "1.18.0",
+    "tslint-plugin-prettier": "2.3.0",
+    "typescript": "4.2.4"
+  }
 }
