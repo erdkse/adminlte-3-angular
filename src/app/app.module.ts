@@ -27,6 +27,9 @@ import {ForgotPasswordComponent} from '@modules/forgot-password/forgot-password.
 import {RecoverPasswordComponent} from '@modules/recover-password/recover-password.component';
 import {LanguageDropdownComponent} from '@modules/main/header/language-dropdown/language-dropdown.component';
 import {PrivacyPolicyComponent} from './modules/privacy-policy/privacy-policy.component';
+import { MainMenuComponent } from './pages/main-menu/main-menu.component';
+import { SubMenuComponent } from './pages/main-menu/sub-menu/sub-menu.component';
+import { MenuItemComponent } from './components/menu-item/menu-item.component';
 
 registerLocaleData(localeEn, 'en-EN');
 
@@ -49,7 +52,10 @@ registerLocaleData(localeEn, 'en-EN');
         ForgotPasswordComponent,
         RecoverPasswordComponent,
         LanguageDropdownComponent,
-        PrivacyPolicyComponent
+        PrivacyPolicyComponent,
+        MainMenuComponent,
+        SubMenuComponent,
+        MenuItemComponent
     ],
     imports: [
         BrowserModule,

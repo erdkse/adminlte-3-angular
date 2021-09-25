@@ -1,0 +1,24 @@
+<a
+    (click)="handleMainMenuAction()"
+    class="nav-link"
+    [ngClass]="{active: isMainActive || isOneOfChildrenActive}"
+>
+    <i class="nav-icon fas fa-tachometer-alt"></i>
+    <p>{{ menuItem.name }}</p>
+    <i
+        *ngIf="isExpandable && menuItem.children.length > 0"
+        class="right fas fa-angle-left"
+    ></i>
+</a>
+<ul class="nav nav-treeview" *ngFor="let item of menuItem.children">
+    <li class="nav-item">
+        <a
+            [routerLink]="item.path"
+            [routerLinkActive]="'active'"
+            class="nav-link"
+        >
+            <i class="far fa-circle nav-icon"></i>
+            <p>{{ item.name }}</p>
+        </a>
+    </li>
+</ul>
