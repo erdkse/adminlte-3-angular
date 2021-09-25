@@ -1,5 +1,6 @@
 import {Component, HostBinding, Input, OnInit} from '@angular/core';
 import {NavigationEnd, Router} from '@angular/router';
+import {filter} from 'rxjs/operators';
 
 @Component({
     selector: 'app-menu-item',
@@ -25,12 +26,11 @@ export class MenuItemComponent implements OnInit {
             this.isExpandable = true;
         }
         this.calculateIsActive(this.router.url);
-        this.router.events.subscribe((event: NavigationEnd) => {
-            if (event.constructor.name === 'NavigationEnd') {
-                console.log(event);
+        this.router.events
+            .pipe(filter((event) => event instanceof NavigationEnd))
+            .subscribe((event: NavigationEnd) => {
                 this.calculateIsActive(event.url);
-            }
-        });
+            });
     }
 
     public handleMainMenuAction() {
@@ -61,10 +61,5 @@ export class MenuItemComponent implements OnInit {
         if (!this.isMainActive && !this.isOneOfChildrenActive) {
             this.isMenuExtended = false;
         }
-        console.log(
-            this.isMainActive,
-            this.isOneOfChildrenActive,
-            this.isMenuExtended
-        );
     }
 }
