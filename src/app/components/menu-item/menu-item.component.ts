@@ -27,6 +27,7 @@ export class MenuItemComponent implements OnInit {
         this.calculateIsActive(this.router.url);
         this.router.events.subscribe((event: NavigationEnd) => {
             if (event.constructor.name === 'NavigationEnd') {
+                console.log(event);
                 this.calculateIsActive(event.url);
             }
         });
@@ -60,5 +61,10 @@ export class MenuItemComponent implements OnInit {
         if (!this.isMainActive && !this.isOneOfChildrenActive) {
             this.isMenuExtended = false;
         }
+        console.log(
+            this.isMainActive,
+            this.isOneOfChildrenActive,
+            this.isMenuExtended
+        );
     }
 }
