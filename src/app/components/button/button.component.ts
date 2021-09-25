@@ -2,10 +2,10 @@ import {Component, Input} from '@angular/core';
 
 @Component({
     selector: 'app-button',
-    templateUrl: './app-button.component.html',
-    styleUrls: ['./app-button.component.scss']
+    templateUrl: './button.component.html',
+    styleUrls: ['./button.component.scss']
 })
-export class AppButtonComponent {
+export class ButtonComponent {
     @Input() type: string = 'button';
     @Input() block: boolean = false;
     @Input() color: string = 'primary';

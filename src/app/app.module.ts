@@ -18,7 +18,7 @@ import {DashboardComponent} from '@pages/dashboard/dashboard.component';
 import {ToastrModule} from 'ngx-toastr';
 import {MessagesDropdownMenuComponent} from '@modules/main/header/messages-dropdown-menu/messages-dropdown-menu.component';
 import {NotificationsDropdownMenuComponent} from '@modules/main/header/notifications-dropdown-menu/notifications-dropdown-menu.component';
-import {AppButtonComponent} from './components/app-button/app-button.component';
+import {ButtonComponent} from './components/button/button.component';
 
 import {registerLocaleData} from '@angular/common';
 import localeEn from '@angular/common/locales/en';
@@ -27,9 +27,11 @@ import {ForgotPasswordComponent} from '@modules/forgot-password/forgot-password.
 import {RecoverPasswordComponent} from '@modules/recover-password/recover-password.component';
 import {LanguageDropdownComponent} from '@modules/main/header/language-dropdown/language-dropdown.component';
 import {PrivacyPolicyComponent} from './modules/privacy-policy/privacy-policy.component';
-import { MainMenuComponent } from './pages/main-menu/main-menu.component';
-import { SubMenuComponent } from './pages/main-menu/sub-menu/sub-menu.component';
-import { MenuItemComponent } from './components/menu-item/menu-item.component';
+import {MainMenuComponent} from './pages/main-menu/main-menu.component';
+import {SubMenuComponent} from './pages/main-menu/sub-menu/sub-menu.component';
+import {MenuItemComponent} from './components/menu-item/menu-item.component';
+import {DropdownComponent} from './components/dropdown/dropdown.component';
+import {DropdownMenuComponent} from './components/dropdown/dropdown-menu/dropdown-menu.component';
 
 registerLocaleData(localeEn, 'en-EN');
 
@@ -47,7 +49,7 @@ registerLocaleData(localeEn, 'en-EN');
         DashboardComponent,
         MessagesDropdownMenuComponent,
         NotificationsDropdownMenuComponent,
-        AppButtonComponent,
+        ButtonComponent,
         UserDropdownMenuComponent,
         ForgotPasswordComponent,
         RecoverPasswordComponent,
@@ -55,7 +57,9 @@ registerLocaleData(localeEn, 'en-EN');
         PrivacyPolicyComponent,
         MainMenuComponent,
         SubMenuComponent,
-        MenuItemComponent
+        MenuItemComponent,
+        DropdownComponent,
+        DropdownMenuComponent
     ],
     imports: [
         BrowserModule,

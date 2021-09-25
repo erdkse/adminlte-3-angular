@@ -1,0 +1,7 @@
+<a class="nav-link" (click)="toggleDropdown()">
+    <ng-content select="[dropdown-button]"></ng-content>
+</a>
+
+<app-dropdown-menu *ngIf="isOpen" [size]="size">
+    <ng-content select="[dropdown-menu]"></ng-content>
+</app-dropdown-menu>

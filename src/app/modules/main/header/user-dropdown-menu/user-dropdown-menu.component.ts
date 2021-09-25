@@ -1,11 +1,4 @@
-import {
-    Component,
-    OnInit,
-    ViewChild,
-    HostListener,
-    ElementRef,
-    Renderer2
-} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {AppService} from '@services/app.service';
 import {DateTime} from 'luxon';
 
@@ -17,38 +10,10 @@ import {DateTime} from 'luxon';
 export class UserDropdownMenuComponent implements OnInit {
     public user;
 
-    @ViewChild('dropdownMenu', {static: false}) dropdownMenu;
-    @HostListener('document:click', ['$event'])
-    clickout(event) {
-        if (!this.elementRef.nativeElement.contains(event.target)) {
-            this.hideDropdownMenu();
-        }
-    }
-
-    constructor(
-        private elementRef: ElementRef,
-        private renderer: Renderer2,
-        private appService: AppService
-    ) {}
+    constructor(private appService: AppService) {}
 
     ngOnInit(): void {
         this.user = this.appService.user;
-    }
-
-    toggleDropdownMenu() {
-        if (this.dropdownMenu.nativeElement.classList.contains('show')) {
-            this.hideDropdownMenu();
-        } else {
-            this.showDropdownMenu();
-        }
-    }
-
-    showDropdownMenu() {
-        this.renderer.addClass(this.dropdownMenu.nativeElement, 'show');
-    }
-
-    hideDropdownMenu() {
-        this.renderer.removeClass(this.dropdownMenu.nativeElement, 'show');
     }
 
     logout() {

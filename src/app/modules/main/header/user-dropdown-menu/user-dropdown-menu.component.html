@@ -1,20 +1,12 @@
-<li class="nav-item dropdown user-menu">
-    <a
-        class="nav-link dropdown-toggle"
-        data-toggle="dropdown"
-        (click)="toggleDropdownMenu()"
-    >
+<app-dropdown class="user-menu">
+    <ng-container dropdown-button>
         <img
             [src]="user.picture || 'assets/img/default-profile.png'"
             class="user-image img-circle elevation-2"
             alt="User Image"
         />
-    </a>
-    <ul
-        #dropdownMenu
-        class="dropdown-menu dropdown-menu-lg dropdown-menu-right"
-    >
-        <!-- User image -->
+    </ng-container>
+    <ng-container dropdown-menu>
         <li class="user-header bg-primary">
             <img
                 [src]="user.picture || 'assets/img/default-profile.png'"
@@ -54,5 +46,5 @@
                 >Sign out</a
             >
         </li>
-    </ul>
-</li>
+    </ng-container>
+</app-dropdown>
