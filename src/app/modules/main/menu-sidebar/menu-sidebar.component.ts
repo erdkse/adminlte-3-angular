@@ -8,15 +8,25 @@ import {AppService} from '@services/app.service';
 })
 export class MenuSidebarComponent implements OnInit {
     public user;
-    public dashboardMenu: any = {
+    public menu = MENU;
+
+    constructor(public appService: AppService) {}
+
+    ngOnInit() {
+        this.user = this.appService.user;
+    }
+}
+
+export const MENU = [
+    {
         name: 'Dashboard',
         path: ['/']
-    };
-    public blankMenu: any = {
+    },
+    {
         name: 'Blank',
         path: ['/blank']
-    };
-    public mainMenu: any = {
+    },
+    {
         name: 'Main Menu',
         children: [
             {
@@ -29,11 +39,5 @@ export class MenuSidebarComponent implements OnInit {
                 path: ['/sub-menu-2']
             }
         ]
-    };
-
-    constructor(public appService: AppService) {}
-
-    ngOnInit() {
-        this.user = this.appService.user;
     }
-}
+];

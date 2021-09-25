@@ -35,9 +35,10 @@
             role="menu"
             data-accordion="false"
         >
-            <app-menu-item [menuItem]="dashboardMenu"></app-menu-item>
-            <app-menu-item [menuItem]="blankMenu"></app-menu-item>
-            <app-menu-item [menuItem]="mainMenu"></app-menu-item>
+            <app-menu-item
+                *ngFor="let item of menu"
+                [menuItem]="item"
+            ></app-menu-item>
         </ul>
     </nav>
 </div>
