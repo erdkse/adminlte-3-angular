@@ -16,16 +16,16 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {RegisterComponent} from '@modules/register/register.component';
 import {DashboardComponent} from '@pages/dashboard/dashboard.component';
 import {ToastrModule} from 'ngx-toastr';
-import {MessagesDropdownMenuComponent} from '@modules/main/header/messages-dropdown-menu/messages-dropdown-menu.component';
-import {NotificationsDropdownMenuComponent} from '@modules/main/header/notifications-dropdown-menu/notifications-dropdown-menu.component';
+import {MessagesComponent} from '@modules/main/header/messages/messages.component';
+import {NotificationsComponent} from '@modules/main/header/notifications/notifications.component';
 import {ButtonComponent} from './components/button/button.component';
 
 import {registerLocaleData} from '@angular/common';
 import localeEn from '@angular/common/locales/en';
-import {UserDropdownMenuComponent} from '@modules/main/header/user-dropdown-menu/user-dropdown-menu.component';
+import {UserComponent} from '@modules/main/header/user/user.component';
 import {ForgotPasswordComponent} from '@modules/forgot-password/forgot-password.component';
 import {RecoverPasswordComponent} from '@modules/recover-password/recover-password.component';
-import {LanguageDropdownComponent} from '@modules/main/header/language-dropdown/language-dropdown.component';
+import {LanguageComponent} from '@modules/main/header/language/language.component';
 import {PrivacyPolicyComponent} from './modules/privacy-policy/privacy-policy.component';
 import {MainMenuComponent} from './pages/main-menu/main-menu.component';
 import {SubMenuComponent} from './pages/main-menu/sub-menu/sub-menu.component';
@@ -47,13 +47,13 @@ registerLocaleData(localeEn, 'en-EN');
         ProfileComponent,
         RegisterComponent,
         DashboardComponent,
-        MessagesDropdownMenuComponent,
-        NotificationsDropdownMenuComponent,
+        MessagesComponent,
+        NotificationsComponent,
         ButtonComponent,
-        UserDropdownMenuComponent,
+        UserComponent,
         ForgotPasswordComponent,
         RecoverPasswordComponent,
-        LanguageDropdownComponent,
+        LanguageComponent,
         PrivacyPolicyComponent,
         MainMenuComponent,
         SubMenuComponent,

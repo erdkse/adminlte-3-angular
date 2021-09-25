@@ -3,11 +3,11 @@ import {AppService} from '@services/app.service';
 import {DateTime} from 'luxon';
 
 @Component({
-    selector: 'app-user-dropdown-menu',
-    templateUrl: './user-dropdown-menu.component.html',
-    styleUrls: ['./user-dropdown-menu.component.scss']
+    selector: 'app-user',
+    templateUrl: './user.component.html',
+    styleUrls: ['./user.component.scss']
 })
-export class UserDropdownMenuComponent implements OnInit {
+export class UserComponent implements OnInit {
     public user;
 
     constructor(private appService: AppService) {}
