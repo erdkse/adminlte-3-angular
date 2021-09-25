@@ -1,5 +1,5 @@
 import {Component, HostBinding, Input, OnInit} from '@angular/core';
-import {Router} from '@angular/router';
+import {NavigationEnd, Router} from '@angular/router';
 
 @Component({
     selector: 'app-menu-item',
@@ -11,6 +11,8 @@ export class MenuItemComponent implements OnInit {
     public isExpandable: boolean = false;
     @HostBinding('class.nav-item') isNavItem: boolean = true;
     @HostBinding('class.menu-open') isMenuExtended: boolean = false;
+    public isMainActive: boolean = false;
+    public isOneOfChildrenActive: boolean = false;
 
     constructor(private router: Router) {}
 
@@ -22,6 +24,12 @@ export class MenuItemComponent implements OnInit {
         ) {
             this.isExpandable = true;
         }
+        this.calculateIsActive(this.router.url);
+        this.router.events.subscribe((event: NavigationEnd) => {
+            if (event.constructor.name === 'NavigationEnd') {
+                this.calculateIsActive(event.url);
+            }
+        });
     }
 
     public handleMainMenuAction() {
@@ -34,5 +42,23 @@ export class MenuItemComponent implements OnInit {
 
     public toggleMenu() {
         this.isMenuExtended = !this.isMenuExtended;
+    }
+
+    public calculateIsActive(url: string) {
+        this.isMainActive = false;
+        this.isOneOfChildrenActive = false;
+        if (this.isExpandable) {
+            this.menuItem.children.forEach((item) => {
+                if (item.path[0] === url) {
+                    this.isOneOfChildrenActive = true;
+                    this.isMenuExtended = true;
+                }
+            });
+        } else if (this.menuItem.path[0] === url) {
+            this.isMainActive = true;
+        }
+        if (!this.isMainActive && !this.isOneOfChildrenActive) {
+            this.isMenuExtended = false;
+        }
     }
 }
