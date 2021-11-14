@@ -18,7 +18,7 @@ export class AppService {
             await this.getProfile();
             this.router.navigate(['/']);
         } catch (error) {
-            this.toastr.error(error.response.data.message);
+            this.toastr.error(error.message);
         }
     }
 
@@ -29,7 +29,7 @@ export class AppService {
             await this.getProfile();
             this.router.navigate(['/']);
         } catch (error) {
-            this.toastr.error(error.response.data.message);
+            this.toastr.error(error.message);
         }
     }
 
@@ -40,7 +40,7 @@ export class AppService {
             await this.getProfile();
             this.router.navigate(['/']);
         } catch (error) {
-            this.toastr.error(error.response.data.message);
+            this.toastr.error(error.message);
         }
     }
 
@@ -51,7 +51,7 @@ export class AppService {
             await this.getProfile();
             this.router.navigate(['/']);
         } catch (error) {
-            this.toastr.error(error.response.data.message);
+            this.toastr.error(error.message);
         }
     }
 
@@ -62,7 +62,7 @@ export class AppService {
             await this.getProfile();
             this.router.navigate(['/']);
         } catch (error) {
-            this.toastr.error(error.response.data.message);
+            this.toastr.error(error.message);
         }
     }
 
@@ -73,7 +73,7 @@ export class AppService {
             await this.getProfile();
             this.router.navigate(['/']);
         } catch (error) {
-            this.toastr.error(error.response.data.message);
+            this.toastr.error(error.message);
         }
     }
 

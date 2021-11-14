@@ -30,7 +30,13 @@
                         "buildOptimizer": false,
                         "sourceMap": true,
                         "optimization": false,
-                        "namedChunks": true
+                        "namedChunks": true,
+                        "allowedCommonJsDependencies": [
+                            "gatekeeper-client-sdk",
+                            "path",
+                            "os",
+                            "fs"
+                        ]
                     },
                     "configurations": {
                         "production": {
