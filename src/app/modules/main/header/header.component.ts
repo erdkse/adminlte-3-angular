@@ -22,4 +22,6 @@ export class HeaderComponent implements OnInit {
     logout() {
         this.appService.logout();
     }
+
+    onToggleControlSidebar() {}
 }
