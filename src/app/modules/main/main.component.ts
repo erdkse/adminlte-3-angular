@@ -10,11 +10,19 @@ import {Observable} from 'rxjs';
 })
 export class MainComponent implements OnInit {
     @HostBinding('class') class = 'wrapper';
-    public ui: Observable<{isSidebarMenuCollapsed: boolean}>;
+    public ui: Observable<{
+        menuSidebarCollapsed: boolean;
+        controlSidebarCollapsed: boolean;
+    }>;
 
     constructor(
         private renderer: Renderer2,
-        private store: Store<{ui: {isSidebarMenuCollapsed: boolean}}>
+        private store: Store<{
+            ui: {
+                menuSidebarCollapsed: boolean;
+                controlSidebarCollapsed: boolean;
+            };
+        }>
     ) {}
 
     ngOnInit() {
@@ -27,9 +35,13 @@ export class MainComponent implements OnInit {
             document.querySelector('app-root'),
             'register-page'
         );
+        this.renderer.addClass(
+            document.querySelector('app-root'),
+            'layout-fixed'
+        );
 
-        this.ui.subscribe(({isSidebarMenuCollapsed}) => {
-            if (isSidebarMenuCollapsed) {
+        this.ui.subscribe(({menuSidebarCollapsed, controlSidebarCollapsed}) => {
+            if (menuSidebarCollapsed) {
                 this.renderer.removeClass(
                     document.querySelector('app-root'),
                     'sidebar-open'
@@ -46,6 +58,18 @@ export class MainComponent implements OnInit {
                 this.renderer.addClass(
                     document.querySelector('app-root'),
                     'sidebar-open'
+                );
+            }
+
+            if (controlSidebarCollapsed) {
+                this.renderer.removeClass(
+                    document.querySelector('app-root'),
+                    'control-sidebar-slide-open'
+                );
+            } else {
+                this.renderer.addClass(
+                    document.querySelector('app-root'),
+                    'control-sidebar-slide-open'
                 );
             }
         });

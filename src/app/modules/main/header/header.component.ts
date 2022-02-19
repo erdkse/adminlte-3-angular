@@ -1,4 +1,4 @@
-import {ToggleSidebarMenu} from '@/store/ui/actions';
+import {ToggleControlSidebar, ToggleSidebarMenu} from '@/store/ui/actions';
 import {Component, OnInit, Output, EventEmitter} from '@angular/core';
 import {FormGroup, FormControl} from '@angular/forms';
 import {Store} from '@ngrx/store';
@@ -14,7 +14,7 @@ export class HeaderComponent implements OnInit {
 
     constructor(
         private appService: AppService,
-        private store: Store<{ui: {isSidebarMenuCollapsed: boolean}}>
+        private store: Store<{ui: {menuSidebarCollapsed: boolean}}>
     ) {}
 
     ngOnInit() {
@@ -31,5 +31,7 @@ export class HeaderComponent implements OnInit {
         this.store.dispatch(new ToggleSidebarMenu());
     }
 
-    onToggleControlSidebar() {}
+    onToggleControlSidebar() {
+        this.store.dispatch(new ToggleControlSidebar());
+    }
 }
