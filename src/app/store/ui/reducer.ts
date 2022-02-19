@@ -1,16 +1,8 @@
 import * as Actions from './actions';
 import {UiAction} from './actions';
+import initialState, {UiState} from './state';
 
-const initialState = {
-    darkMode: false,
-    navbarVariant: 'navbar-light',
-    sidebarSkin: 'sidebar-dark-primary',
-    menuSidebarCollapsed: false,
-    controlSidebarCollapsed: true
-    // screenSize: calculateWindowSize(window.innerWidth)
-};
-
-export function uiReducer(state = initialState, action: UiAction) {
+export function uiReducer(state: UiState = initialState, action: UiAction) {
     switch (action.type) {
         case Actions.TOGGLE_SIDEBAR_MENU:
             return {

@@ -36,6 +36,8 @@ import {ControlSidebarComponent} from './modules/main/control-sidebar/control-si
 import {StoreModule} from '@ngrx/store';
 import {authReducer} from './store/auth/reducer';
 import {uiReducer} from './store/ui/reducer';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { SelectComponent } from './components/select/select.component';
 
 registerLocaleData(localeEn, 'en-EN');
 
@@ -64,7 +66,8 @@ registerLocaleData(localeEn, 'en-EN');
         MenuItemComponent,
         DropdownComponent,
         DropdownMenuComponent,
-        ControlSidebarComponent
+        ControlSidebarComponent,
+        SelectComponent
     ],
     imports: [
         BrowserModule,
@@ -77,7 +80,8 @@ registerLocaleData(localeEn, 'en-EN');
             timeOut: 3000,
             positionClass: 'toast-top-right',
             preventDuplicates: true
-        })
+        }),
+        NgbModule
     ],
     providers: [],
     bootstrap: [AppComponent]

@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, HostBinding, OnInit} from '@angular/core';
 import {AppService} from '@services/app.service';
 
 @Component({
@@ -7,6 +7,7 @@ import {AppService} from '@services/app.service';
     styleUrls: ['./menu-sidebar.component.scss']
 })
 export class MenuSidebarComponent implements OnInit {
+    @HostBinding('class') classes: string = 'main-sidebar elevation-4';
     public user;
     public menu = MENU;
 

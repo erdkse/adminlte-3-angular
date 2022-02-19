@@ -1,4 +1,6 @@
+import {AppState} from '@/store/state';
 import {ToggleSidebarMenu} from '@/store/ui/actions';
+import {UiState} from '@/store/ui/state';
 import {Component, HostBinding, OnInit, Renderer2} from '@angular/core';
 import {Store} from '@ngrx/store';
 import {Observable} from 'rxjs';
@@ -10,20 +12,9 @@ import {Observable} from 'rxjs';
 })
 export class MainComponent implements OnInit {
     @HostBinding('class') class = 'wrapper';
-    public ui: Observable<{
-        menuSidebarCollapsed: boolean;
-        controlSidebarCollapsed: boolean;
-    }>;
+    public ui: Observable<UiState>;
 
-    constructor(
-        private renderer: Renderer2,
-        private store: Store<{
-            ui: {
-                menuSidebarCollapsed: boolean;
-                controlSidebarCollapsed: boolean;
-            };
-        }>
-    ) {}
+    constructor(private renderer: Renderer2, private store: Store<AppState>) {}
 
     ngOnInit() {
         this.ui = this.store.select('ui');

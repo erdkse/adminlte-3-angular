@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import {Component, HostBinding} from '@angular/core';
 import {DateTime} from 'luxon';
 import packageInfo from './../../../../../package.json';
 
@@ -8,6 +8,7 @@ import packageInfo from './../../../../../package.json';
     styleUrls: ['./footer.component.scss']
 })
 export class FooterComponent {
+    @HostBinding('class') classes: string = 'main-footer';
     public appVersion = packageInfo.version;
     public currentYear: string = DateTime.now().toFormat('y');
 }

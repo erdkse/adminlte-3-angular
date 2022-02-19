@@ -1,6 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
 // @import '~bootstrap/scss/bootstrap';
 
+/* Importing Bootstrap SCSS file. */
+// @import '~bootstrap/scss/bootstrap';
+
 @import url('https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css');
 @import url('https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.3.0/css/flag-icon.min.css');
 @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700');
@@ -131,4 +134,8 @@ body {
     width: 1.6rem;
     margin-right: 0;
     margin-left: -8px;
+}
+
+.content {
+    padding: 0 0.5rem;
 }
