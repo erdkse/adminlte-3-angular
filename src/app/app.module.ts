@@ -32,6 +32,10 @@ import {SubMenuComponent} from './pages/main-menu/sub-menu/sub-menu.component';
 import {MenuItemComponent} from './components/menu-item/menu-item.component';
 import {DropdownComponent} from './components/dropdown/dropdown.component';
 import {DropdownMenuComponent} from './components/dropdown/dropdown-menu/dropdown-menu.component';
+import {ControlSidebarComponent} from './modules/main/control-sidebar/control-sidebar.component';
+import {StoreModule} from '@ngrx/store';
+import {authReducer} from './store/auth/reducer';
+import {uiReducer} from './store/ui/reducer';
 
 registerLocaleData(localeEn, 'en-EN');
 
@@ -59,10 +63,12 @@ registerLocaleData(localeEn, 'en-EN');
         SubMenuComponent,
         MenuItemComponent,
         DropdownComponent,
-        DropdownMenuComponent
+        DropdownMenuComponent,
+        ControlSidebarComponent
     ],
     imports: [
         BrowserModule,
+        StoreModule.forRoot({auth: authReducer, ui: uiReducer}),
         HttpClientModule,
         AppRoutingModule,
         ReactiveFormsModule,

@@ -1,5 +1,7 @@
+import {ToggleSidebarMenu} from '@/store/ui/actions';
 import {Component, HostBinding, OnInit, Renderer2} from '@angular/core';
-import {AppService} from '@services/app.service';
+import {Store} from '@ngrx/store';
+import {Observable} from 'rxjs';
 
 @Component({
     selector: 'app-main',
@@ -8,11 +10,15 @@ import {AppService} from '@services/app.service';
 })
 export class MainComponent implements OnInit {
     @HostBinding('class') class = 'wrapper';
-    public sidebarMenuOpened = true;
+    public ui: Observable<{isSidebarMenuCollapsed: boolean}>;
 
-    constructor(private renderer: Renderer2, private appService: AppService) {}
+    constructor(
+        private renderer: Renderer2,
+        private store: Store<{ui: {isSidebarMenuCollapsed: boolean}}>
+    ) {}
 
     ngOnInit() {
+        this.ui = this.store.select('ui');
         this.renderer.removeClass(
             document.querySelector('app-root'),
             'login-page'
@@ -21,29 +27,31 @@ export class MainComponent implements OnInit {
             document.querySelector('app-root'),
             'register-page'
         );
+
+        this.ui.subscribe(({isSidebarMenuCollapsed}) => {
+            if (isSidebarMenuCollapsed) {
+                this.renderer.removeClass(
+                    document.querySelector('app-root'),
+                    'sidebar-open'
+                );
+                this.renderer.addClass(
+                    document.querySelector('app-root'),
+                    'sidebar-collapse'
+                );
+            } else {
+                this.renderer.removeClass(
+                    document.querySelector('app-root'),
+                    'sidebar-collapse'
+                );
+                this.renderer.addClass(
+                    document.querySelector('app-root'),
+                    'sidebar-open'
+                );
+            }
+        });
     }
 
-    toggleMenuSidebar() {
-        if (this.sidebarMenuOpened) {
-            this.renderer.removeClass(
-                document.querySelector('app-root'),
-                'sidebar-open'
-            );
-            this.renderer.addClass(
-                document.querySelector('app-root'),
-                'sidebar-collapse'
-            );
-            this.sidebarMenuOpened = false;
-        } else {
-            this.renderer.removeClass(
-                document.querySelector('app-root'),
-                'sidebar-collapse'
-            );
-            this.renderer.addClass(
-                document.querySelector('app-root'),
-                'sidebar-open'
-            );
-            this.sidebarMenuOpened = true;
-        }
+    onToggleMenuSidebar() {
+        this.store.dispatch(new ToggleSidebarMenu());
     }
 }

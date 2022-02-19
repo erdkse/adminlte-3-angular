@@ -31,6 +31,7 @@
         "@angular/platform-browser": "13.2.0",
         "@angular/platform-browser-dynamic": "13.2.0",
         "@angular/router": "13.2.0",
+        "@ngrx/store": "^13.0.2",
         "core-js": "3.8.0",
         "gatekeeper-client-sdk": "0.4.2",
         "luxon": "2.3.0",

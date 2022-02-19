@@ -1,5 +1,7 @@
+import {ToggleSidebarMenu} from '@/store/ui/actions';
 import {Component, OnInit, Output, EventEmitter} from '@angular/core';
 import {FormGroup, FormControl} from '@angular/forms';
+import {Store} from '@ngrx/store';
 import {AppService} from '@services/app.service';
 
 @Component({
@@ -8,10 +10,12 @@ import {AppService} from '@services/app.service';
     styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-    @Output() toggleMenuSidebar: EventEmitter<any> = new EventEmitter<any>();
     public searchForm: FormGroup;
 
-    constructor(private appService: AppService) {}
+    constructor(
+        private appService: AppService,
+        private store: Store<{ui: {isSidebarMenuCollapsed: boolean}}>
+    ) {}
 
     ngOnInit() {
         this.searchForm = new FormGroup({
@@ -21,6 +25,10 @@ export class HeaderComponent implements OnInit {
 
     logout() {
         this.appService.logout();
+    }
+
+    onToggleMenuSidebar() {
+        this.store.dispatch(new ToggleSidebarMenu());
     }
 
     onToggleControlSidebar() {}
