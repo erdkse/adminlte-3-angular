@@ -15,9 +15,7 @@ import {
 })
 export class DropdownMenuComponent implements OnInit, AfterViewInit {
     @Input() size: string;
-    @HostBinding('class.dropdown-menu') hasDropdownMenu: boolean = true;
-    @HostBinding('class.dropdown-menu-right') hasDropdownMenuRight: boolean =
-        true;
+    @HostBinding('class') classes: string = 'dropdown-menu dropdown-menu-right';
     @HostBinding('class.show') hasShow: boolean = true;
 
     constructor(
