@@ -38,6 +38,7 @@ import {authReducer} from './store/auth/reducer';
 import {uiReducer} from './store/ui/reducer';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { SelectComponent } from './components/select/select.component';
+import { CheckboxComponent } from './components/checkbox/checkbox.component';
 
 registerLocaleData(localeEn, 'en-EN');
 
@@ -67,7 +68,8 @@ registerLocaleData(localeEn, 'en-EN');
         DropdownComponent,
         DropdownMenuComponent,
         ControlSidebarComponent,
-        SelectComponent
+        SelectComponent,
+        CheckboxComponent
     ],
     imports: [
         BrowserModule,

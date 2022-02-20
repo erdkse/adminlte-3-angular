@@ -1,9 +1,11 @@
 import {
     Component,
+    EventEmitter,
     HostBinding,
     Input,
     OnChanges,
     OnInit,
+    Output,
     SimpleChanges
 } from '@angular/core';
 import {v4 as uuidv4} from 'uuid';
@@ -13,14 +15,14 @@ import {v4 as uuidv4} from 'uuid';
     templateUrl: './select.component.html',
     styleUrls: ['./select.component.scss']
 })
-export class SelectComponent implements OnInit, OnChanges {
+export class SelectComponent implements OnInit {
     @HostBinding('class') classes: string = 'form-group';
     public ID: string;
     @Input() type: string;
     @Input() disabled: boolean;
     @Input() options: Array<Option>;
-    @Input() modelValue: string;
-    public isNoneSelected: boolean = false;
+    @Input() value: string;
+    @Output() valueChange = new EventEmitter<string>();
 
     constructor() {}
 
@@ -28,9 +30,17 @@ export class SelectComponent implements OnInit, OnChanges {
         this.ID = uuidv4();
     }
 
-    ngOnChanges(changes: SimpleChanges) {
-        this.isNoneSelected = false;
-        console.log(changes.prop);
+    onValueChange(event) {
+        this.valueChange.emit(event.target.value);
+    }
+
+    public isNoneSelected(): boolean {
+        if (!this.value) {
+            return true;
+        }
+        return this.options.some(
+            (option: Option) => option.value === this.value
+        );
     }
 }
 

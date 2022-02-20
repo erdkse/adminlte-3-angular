@@ -9,12 +9,13 @@
     [id]="ID"
     [name]="ID"
     [disabled]="disabled"
+    (change)="onValueChange($event)"
 >
-    <option [selected]="isNoneSelected">None</option>
+    <option [selected]="isNoneSelected()">None</option>
     <option
         *ngFor="let option of options"
         [value]="option.value"
-        [selected]="modelValue === option.value"
+        [selected]="value === option.value"
     >
         {{ option.label }}
     </option>
