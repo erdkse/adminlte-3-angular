@@ -16,7 +16,6 @@ const BASE_CLASSES = 'main-header navbar navbar-expand';
 export class HeaderComponent implements OnInit {
     @HostBinding('class') classes: string = BASE_CLASSES;
     public ui: Observable<UiState>;
-    public navbarVariant: string;
     public searchForm: FormGroup;
 
     constructor(

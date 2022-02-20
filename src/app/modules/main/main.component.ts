@@ -31,39 +31,53 @@ export class MainComponent implements OnInit {
             'layout-fixed'
         );
 
-        this.ui.subscribe(({menuSidebarCollapsed, controlSidebarCollapsed}) => {
-            if (menuSidebarCollapsed) {
-                this.renderer.removeClass(
-                    document.querySelector('app-root'),
-                    'sidebar-open'
-                );
-                this.renderer.addClass(
-                    document.querySelector('app-root'),
-                    'sidebar-collapse'
-                );
-            } else {
-                this.renderer.removeClass(
-                    document.querySelector('app-root'),
-                    'sidebar-collapse'
-                );
-                this.renderer.addClass(
-                    document.querySelector('app-root'),
-                    'sidebar-open'
-                );
-            }
+        this.ui.subscribe(
+            ({menuSidebarCollapsed, controlSidebarCollapsed, darkMode}) => {
+                if (menuSidebarCollapsed) {
+                    this.renderer.removeClass(
+                        document.querySelector('app-root'),
+                        'sidebar-open'
+                    );
+                    this.renderer.addClass(
+                        document.querySelector('app-root'),
+                        'sidebar-collapse'
+                    );
+                } else {
+                    this.renderer.removeClass(
+                        document.querySelector('app-root'),
+                        'sidebar-collapse'
+                    );
+                    this.renderer.addClass(
+                        document.querySelector('app-root'),
+                        'sidebar-open'
+                    );
+                }
 
-            if (controlSidebarCollapsed) {
-                this.renderer.removeClass(
-                    document.querySelector('app-root'),
-                    'control-sidebar-slide-open'
-                );
-            } else {
-                this.renderer.addClass(
-                    document.querySelector('app-root'),
-                    'control-sidebar-slide-open'
-                );
+                if (controlSidebarCollapsed) {
+                    this.renderer.removeClass(
+                        document.querySelector('app-root'),
+                        'control-sidebar-slide-open'
+                    );
+                } else {
+                    this.renderer.addClass(
+                        document.querySelector('app-root'),
+                        'control-sidebar-slide-open'
+                    );
+                }
+
+                if (darkMode) {
+                    this.renderer.addClass(
+                        document.querySelector('app-root'),
+                        'dark-mode'
+                    );
+                } else {
+                    this.renderer.removeClass(
+                        document.querySelector('app-root'),
+                        'dark-mode'
+                    );
+                }
             }
-        });
+        );
     }
 
     onToggleMenuSidebar() {

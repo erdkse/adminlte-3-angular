@@ -1,7 +1,9 @@
 <h5>Customize AdminLTE</h5>
 <hr class="mb-2" />
 <div style="padding: 8px 0">
-    <!-- <app-checkbox @change="handleDarkModeChange"> Dark mode </app-checkbox> -->
+    <app-checkbox (valueChange)="handleDarkModeChange($event)">
+        Dark mode
+    </app-checkbox>
     <app-select
         class="mt-3"
         [value]="navbarVariant"
@@ -20,7 +22,7 @@
     >
         Dark Navbar Variants
     </app-select>
-    <!-- <app-select class="mt-3" [options]="[]" type="custom" disabled="true">
+    <app-select class="mt-3" [options]="[]" type="custom" disabled="true">
         Accent Color Variants
     </app-select>
     <app-select
@@ -44,5 +46,5 @@
 
     <app-select class="mt-3" [options]="[]" type="custom" disabled="true">
         Brand Logo Variants
-    </app-select> -->
+    </app-select>
 </div>

@@ -21,8 +21,19 @@ export function uiReducer(state: UiState = initialState, action: UiAction) {
                 controlSidebarCollapsed: !state.controlSidebarCollapsed
             };
         case Actions.TOGGLE_DARK_MODE:
+            let variant: string;
+            let skin: string;
+            if (state.darkMode) {
+                variant = NAVBAR_LIGHT_VARIANTS[0].value;
+                skin = SIDEBAR_LIGHT_SKINS[0].value;
+            } else {
+                variant = NAVBAR_DARK_VARIANTS[0].value;
+                skin = SIDEBAR_DARK_SKINS[0].value;
+            }
             return {
                 ...state,
+                navbarVariant: variant,
+                sidebarSkin: skin,
                 darkMode: !state.darkMode
             };
         case Actions.SET_NAVBAR_VARIANT:

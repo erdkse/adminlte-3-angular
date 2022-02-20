@@ -1,6 +1,6 @@
 [![Run on Repl.it](https://repl.it/badge/github/erdkse/adminlte-3-angular)](https://repl.it/github/erdkse/adminlte-3-angular)
 
-# Admin LTE 3.1.0 - Angular 13.0.0
+# Admin LTE 3.2.0 - Angular 13.2.0
 
 To login website use:
 

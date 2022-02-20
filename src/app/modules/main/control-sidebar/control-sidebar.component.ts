@@ -1,5 +1,9 @@
 import {AppState} from '@/store/state';
-import {SetNavbarVariant, SetSidebarSkin} from '@/store/ui/actions';
+import {
+    SetNavbarVariant,
+    SetSidebarSkin,
+    ToggleDarkMode
+} from '@/store/ui/actions';
 import {UiState} from '@/store/ui/state';
 import {
     Option,
@@ -40,8 +44,8 @@ export class ControlSidebarComponent implements OnInit {
         });
     }
 
-    public handleDarkModeChange() {
-        // this.$store.dispatch('ui/toggleDarkMode');
+    public handleDarkModeChange(value: boolean) {
+        this.store.dispatch(new ToggleDarkMode());
     }
 
     public onNavbarVariantChange(value: string) {
