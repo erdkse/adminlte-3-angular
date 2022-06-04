@@ -5,7 +5,7 @@ import {
     OnDestroy,
     HostBinding
 } from '@angular/core';
-import {FormGroup, FormControl, Validators} from '@angular/forms';
+import {UntypedFormGroup, UntypedFormControl, Validators} from '@angular/forms';
 import {AppService} from '@services/app.service';
 import {ToastrService} from 'ngx-toastr';
 
@@ -17,7 +17,7 @@ import {ToastrService} from 'ngx-toastr';
 export class RegisterComponent implements OnInit, OnDestroy {
     @HostBinding('class') class = 'register-box';
 
-    public registerForm: FormGroup;
+    public registerForm: UntypedFormGroup;
     public isAuthLoading = false;
     public isGoogleLoading = false;
     public isFacebookLoading = false;
@@ -33,10 +33,10 @@ export class RegisterComponent implements OnInit, OnDestroy {
             document.querySelector('app-root'),
             'register-page'
         );
-        this.registerForm = new FormGroup({
-            email: new FormControl(null, Validators.required),
-            password: new FormControl(null, [Validators.required]),
-            retypePassword: new FormControl(null, [Validators.required])
+        this.registerForm = new UntypedFormGroup({
+            email: new UntypedFormControl(null, Validators.required),
+            password: new UntypedFormControl(null, [Validators.required]),
+            retypePassword: new UntypedFormControl(null, [Validators.required])
         });
     }
 

@@ -5,7 +5,7 @@ import {
     Renderer2,
     HostBinding
 } from '@angular/core';
-import {FormGroup, FormControl, Validators} from '@angular/forms';
+import {UntypedFormGroup, UntypedFormControl, Validators} from '@angular/forms';
 import {ToastrService} from 'ngx-toastr';
 import {AppService} from '@services/app.service';
 
@@ -16,7 +16,7 @@ import {AppService} from '@services/app.service';
 })
 export class LoginComponent implements OnInit, OnDestroy {
     @HostBinding('class') class = 'login-box';
-    public loginForm: FormGroup;
+    public loginForm: UntypedFormGroup;
     public isAuthLoading = false;
     public isGoogleLoading = false;
     public isFacebookLoading = false;
@@ -32,9 +32,9 @@ export class LoginComponent implements OnInit, OnDestroy {
             document.querySelector('app-root'),
             'login-page'
         );
-        this.loginForm = new FormGroup({
-            email: new FormControl(null, Validators.required),
-            password: new FormControl(null, Validators.required)
+        this.loginForm = new UntypedFormGroup({
+            email: new UntypedFormControl(null, Validators.required),
+            password: new UntypedFormControl(null, Validators.required)
         });
     }
 

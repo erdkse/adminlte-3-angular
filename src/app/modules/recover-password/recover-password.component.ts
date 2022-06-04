@@ -5,7 +5,7 @@ import {
     OnInit,
     Renderer2
 } from '@angular/core';
-import {FormControl, FormGroup, Validators} from '@angular/forms';
+import {UntypedFormControl, UntypedFormGroup, Validators} from '@angular/forms';
 import {ToastrService} from 'ngx-toastr';
 import {AppService} from '@services/app.service';
 
@@ -17,7 +17,7 @@ import {AppService} from '@services/app.service';
 export class RecoverPasswordComponent implements OnInit, OnDestroy {
     @HostBinding('class') class = 'login-box';
 
-    public recoverPasswordForm: FormGroup;
+    public recoverPasswordForm: UntypedFormGroup;
     public isAuthLoading = false;
 
     constructor(
@@ -31,9 +31,9 @@ export class RecoverPasswordComponent implements OnInit, OnDestroy {
             document.querySelector('app-root'),
             'login-page'
         );
-        this.recoverPasswordForm = new FormGroup({
-            password: new FormControl(null, Validators.required),
-            confirmPassword: new FormControl(null, Validators.required)
+        this.recoverPasswordForm = new UntypedFormGroup({
+            password: new UntypedFormControl(null, Validators.required),
+            confirmPassword: new UntypedFormControl(null, Validators.required)
         });
     }
 
