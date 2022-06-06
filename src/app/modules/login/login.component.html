@@ -41,40 +41,40 @@
                 </div>
                 <!-- /.col -->
                 <div class="col-5">
-                    <app-button
+                    <pf-button
                         [type]="'submit'"
                         [block]="true"
                         [loading]="isAuthLoading"
                         [disabled]="isFacebookLoading || isGoogleLoading"
                     >
                         Sign In
-                    </app-button>
+                    </pf-button>
                 </div>
                 <!-- /.col -->
             </div>
         </form>
 
         <div class="social-auth-links text-center mb-3">
-            <app-button
+            <pf-button
                 class="mb-2"
                 [block]="true"
                 [loading]="isFacebookLoading"
                 [disabled]="isAuthLoading || isGoogleLoading"
-                [icon]="'facebook'"
                 (click)="loginByFacebook()"
             >
+                <i class="fab fa-facebook mr-2"></i>
                 Sign in using Facebook
-            </app-button>
-            <app-button
+            </pf-button>
+            <pf-button
                 [block]="true"
                 [loading]="isGoogleLoading"
                 [disabled]="isAuthLoading || isFacebookLoading"
-                [icon]="'google'"
-                [color]="'danger'"
+                theme="danger"
                 (click)="loginByGoogle()"
             >
+                <i class="fab fa-google mr-2"></i>
                 Sign in using Google+
-            </app-button>
+            </pf-button>
         </div>
 
         <p class="mb-1">

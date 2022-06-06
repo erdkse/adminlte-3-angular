@@ -32,6 +32,7 @@
     "@angular/platform-browser-dynamic": "14.0.0",
     "@angular/router": "14.0.0",
     "@ngrx/store": "14.0.0-beta.0",
+    "@profabric/angular-components": "^0.0.4",
     "bootstrap": "4.6.1",
     "core-js": "3.8.0",
     "gatekeeper-client-sdk": "0.4.2",
