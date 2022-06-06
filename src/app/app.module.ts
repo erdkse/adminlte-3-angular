@@ -34,7 +34,6 @@ import {ControlSidebarComponent} from './modules/main/control-sidebar/control-si
 import {StoreModule} from '@ngrx/store';
 import {authReducer} from './store/auth/reducer';
 import {uiReducer} from './store/ui/reducer';
-import {SelectComponent} from './components/select/select.component';
 import {CheckboxComponent} from './components/checkbox/checkbox.component';
 import {ProfabricComponentsModule} from '@profabric/angular-components';
 import {defineCustomElements} from '@profabric/web-components/loader';
@@ -66,7 +65,6 @@ registerLocaleData(localeEn, 'en-EN');
         DropdownComponent,
         DropdownMenuComponent,
         ControlSidebarComponent,
-        SelectComponent,
         CheckboxComponent
     ],
     imports: [
