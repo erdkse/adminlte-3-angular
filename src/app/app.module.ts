@@ -36,7 +36,6 @@ import {ControlSidebarComponent} from './modules/main/control-sidebar/control-si
 import {StoreModule} from '@ngrx/store';
 import {authReducer} from './store/auth/reducer';
 import {uiReducer} from './store/ui/reducer';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { SelectComponent } from './components/select/select.component';
 import { CheckboxComponent } from './components/checkbox/checkbox.component';
 
@@ -83,7 +82,6 @@ registerLocaleData(localeEn, 'en-EN');
             positionClass: 'toast-top-right',
             preventDuplicates: true
         }),
-        NgbModule
     ],
     providers: [],
     bootstrap: [AppComponent]
