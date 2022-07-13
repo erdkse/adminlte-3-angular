@@ -1,6 +1,6 @@
 <p align="center" style="margin-bottom: 32px">
   <a href="https://erdkse.com" >
-    <img src="https://raw.githubusercontent.com/erdkse/adminlte-3-angular/main/src/assets/img/logo.png" alt="AdminLTE logo" width="75" height="75">
+    <pf-image src="https://raw.githubusercontent.com/erdkse/adminlte-3-angular/main/src/assets/img/logo.png" alt="AdminLTE logo" width="75" height="75">
   </a>
 </p>
 

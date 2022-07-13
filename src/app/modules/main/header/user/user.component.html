@@ -1,18 +1,26 @@
 <app-dropdown class="user-menu">
     <ng-container dropdown-button>
-        <img
-            [src]="user.picture || 'assets/img/default-profile.png'"
-            class="user-image img-circle elevation-2"
+        <pf-image
+            [src]="user.picture"
+            fallback-src="assets/img/default-profile.png"
+            class="user-image-small"
+            width="25"
+            height="25"
             alt="User Image"
-        />
+            rounded
+        ></pf-image>
     </ng-container>
     <ng-container dropdown-menu>
         <li class="user-header bg-primary">
-            <img
-                [src]="user.picture || 'assets/img/default-profile.png'"
-                class="img-circle elevation-2"
+            <pf-image
+                [src]="user.picture"
+                fallback-src="assets/img/default-profile.png"
+                class="user-image-big"
                 alt="User Image"
-            />
+                width="90"
+                height="90"
+                rounded
+            ></pf-image>
 
             <p>
                 <span>{{ user.email }}</span>
