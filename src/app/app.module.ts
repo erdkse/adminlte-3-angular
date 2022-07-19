@@ -28,8 +28,6 @@ import {LanguageComponent} from '@modules/main/header/language/language.componen
 import {MainMenuComponent} from './pages/main-menu/main-menu.component';
 import {SubMenuComponent} from './pages/main-menu/sub-menu/sub-menu.component';
 import {MenuItemComponent} from './components/menu-item/menu-item.component';
-import {DropdownComponent} from './components/dropdown/dropdown.component';
-import {DropdownMenuComponent} from './components/dropdown/dropdown-menu/dropdown-menu.component';
 import {ControlSidebarComponent} from './modules/main/control-sidebar/control-sidebar.component';
 import {StoreModule} from '@ngrx/store';
 import {authReducer} from './store/auth/reducer';
@@ -61,8 +59,6 @@ registerLocaleData(localeEn, 'en-EN');
         MainMenuComponent,
         SubMenuComponent,
         MenuItemComponent,
-        DropdownComponent,
-        DropdownMenuComponent,
         ControlSidebarComponent
     ],
     imports: [

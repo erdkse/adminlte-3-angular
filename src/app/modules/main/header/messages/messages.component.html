@@ -1,9 +1,11 @@
-<app-dropdown size="lg">
-    <ng-container dropdown-button>
-        <i class="far fa-comments"></i>
-        <span class="badge badge-danger navbar-badge">3</span>
-    </ng-container>
-    <ng-container dropdown-menu>
+<pf-dropdown hide-arrow>
+    <div slot="button">
+        <a class="nav-link">
+            <i class="far fa-comments"></i>
+            <span class="badge badge-danger navbar-badge">3</span>
+        </a>
+    </div>
+    <div slot="menu">
         <a href="#" class="dropdown-item">
             <div class="media">
                 <pf-image
@@ -80,5 +82,5 @@
         </a>
         <div class="dropdown-divider"></div>
         <a href="#" class="dropdown-item dropdown-footer">See All Messages</a>
-    </ng-container>
-</app-dropdown>
+    </div>
+</pf-dropdown>

@@ -1,9 +1,11 @@
-<app-dropdown size="lg">
-    <ng-container dropdown-button>
-        <i class="far fa-bell"></i>
-        <span class="badge badge-warning navbar-badge">15</span>
-    </ng-container>
-    <ng-container dropdown-menu>
+<pf-dropdown hide-arrow>
+    <div slot="button">
+        <a class="nav-link">
+            <i class="far fa-bell"></i>
+            <span class="badge badge-warning navbar-badge">15</span>
+        </a>
+    </div>
+    <div slot="menu">
         <span class="dropdown-item dropdown-header">15 Notifications</span>
         <div class="dropdown-divider"></div>
         <a href="#" class="dropdown-item">
@@ -24,8 +26,8 @@
         <a href="#" class="dropdown-item dropdown-footer"
             >See All Notifications</a
         >
-    </ng-container>
-</app-dropdown>
+    </div>
+</pf-dropdown>
 
 <ng-template #notification>
     <a href="#" class="dropdown-item">
