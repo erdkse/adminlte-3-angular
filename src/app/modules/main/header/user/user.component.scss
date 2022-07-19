@@ -86,6 +86,13 @@ pf-dropdown {
 }
 
 @media (min-width: 576px) {
+    .user-body a {
+        background: #ffffff !important;
+        color: #495057 !important;
+    }
+}
+
+@media (min-width: 576px) {
     .user-footer .btn-default:hover {
         background-color: #f8f9fa;
     }

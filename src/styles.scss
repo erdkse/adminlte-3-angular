@@ -24,13 +24,6 @@ body {
     background: transparent;
 }
 
-@media (min-width: 576px) {
-    .user-menu > .dropdown-menu > .user-body a {
-        background: #ffffff !important;
-        color: #495057 !important;
-    }
-}
-
 .content {
     padding: 0 0.5rem;
 }
@@ -42,6 +35,7 @@ body {
     overflow: hidden;
     display: block;
 }
+
 // Override original AdminLTE transform
 .nav-sidebar .menu-is-opening > .nav-link i.right,
 .nav-sidebar .menu-is-opening > .nav-link svg.right,
