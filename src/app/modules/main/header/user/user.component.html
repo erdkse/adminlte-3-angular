@@ -1,23 +1,33 @@
-<app-dropdown class="user-menu">
-    <ng-container dropdown-button>
-        <img
-            [src]="user.picture || 'assets/img/default-profile.png'"
-            class="user-image img-circle elevation-2"
-            alt="User Image"
-        />
-    </ng-container>
-    <ng-container dropdown-menu>
-        <li class="user-header bg-primary">
-            <img
-                [src]="user.picture || 'assets/img/default-profile.png'"
-                class="img-circle elevation-2"
+<pf-dropdown hide-arrow class="user-menu">
+    <div slot="button">
+        <a class="nav-link">
+            <pf-image
+                [src]="user.picture"
+                fallback-src="assets/img/default-profile.png"
+                class="user-image-small"
+                width="25"
+                height="25"
                 alt="User Image"
-            />
+                rounded
+            ></pf-image>
+        </a>
+    </div>
+    <div slot="menu">
+        <li class="user-header bg-primary">
+            <pf-image
+                [src]="user.picture"
+                fallback-src="assets/img/default-profile.png"
+                class="user-image-big"
+                alt="User Image"
+                width="90"
+                height="90"
+                rounded
+            ></pf-image>
 
             <p>
                 <span>{{ user.email }}</span>
                 <small>
-                    <span>Member since&nbsp;</span>
+                    <span class="mr-2">Member since</span>
                     <span>{{ formatDate(user.createdAt) }}</span>
                 </small>
             </p>
@@ -42,9 +52,9 @@
             <a [routerLink]="['/profile']" class="btn btn-default btn-flat">
                 Profile
             </a>
-            <a (click)="logout()" class="btn btn-default btn-flat float-right"
-                >Sign out</a
-            >
+            <a (click)="logout()" class="btn btn-default btn-flat float-right">
+                Sign out
+            </a>
         </li>
-    </ng-container>
-</app-dropdown>
+    </div>
+</pf-dropdown>

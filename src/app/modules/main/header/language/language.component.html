@@ -1,22 +1,29 @@
-<app-dropdown>
-    <ng-container dropdown-button>
-        <i class="flag-icon flag-icon-tr"></i>
-    </ng-container>
-    <ng-container dropdown-menu>
+<pf-dropdown hide-arrow>
+    <div slot="button">
+        <a class="nav-link">
+            <i class="flag-icon flag-icon-tr"></i>
+        </a>
+    </div>
+    <div slot="menu">
         <a href="#" class="dropdown-item active">
-            <i class="flag-icon flag-icon-tr mr-2"></i> Turkish
+            <i class="flag-icon flag-icon-tr mr-2"></i>
+            <span>Turkish</span>
         </a>
         <a href="#" class="dropdown-item">
-            <i class="flag-icon flag-icon-us mr-2"></i> English
+            <i class="flag-icon flag-icon-us mr-2"></i>
+            <span>English</span>
         </a>
         <a href="#" class="dropdown-item">
-            <i class="flag-icon flag-icon-de mr-2"></i> German
+            <i class="flag-icon flag-icon-de mr-2"></i>
+            <span>German</span>
         </a>
         <a href="#" class="dropdown-item">
-            <i class="flag-icon flag-icon-fr mr-2"></i> French
+            <i class="flag-icon flag-icon-fr mr-2"></i>
+            <span>French</span>
         </a>
         <a href="#" class="dropdown-item">
-            <i class="flag-icon flag-icon-es mr-2"></i> Spanish
+            <i class="flag-icon flag-icon-es mr-2"></i>
+            <span>Spanish</span>
         </a>
-    </ng-container>
-</app-dropdown>
+    </div>
+</pf-dropdown>

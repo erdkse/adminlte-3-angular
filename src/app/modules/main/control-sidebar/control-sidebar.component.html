@@ -1,50 +1,60 @@
 <h5>Customize AdminLTE</h5>
 <hr class="mb-2" />
 <div style="padding: 8px 0">
-    <app-checkbox (valueChange)="handleDarkModeChange($event)">
+    <pf-checkbox (change)="handleDarkModeChange($event)">
         Dark mode
-    </app-checkbox>
-    <app-select
+    </pf-checkbox>
+    <pf-select
         class="mt-3"
         [value]="navbarVariant"
         [options]="navbarLightVariants"
         type="custom"
-        (valueChange)="onNavbarVariantChange($event)"
+        label="Light Navbar Variants"
+        (change)="onNavbarVariantChange($event)"
     >
-        Light Navbar Variants
-    </app-select>
-    <app-select
+    </pf-select>
+    <pf-select
         class="mt-3"
         [value]="navbarVariant"
         [options]="navbarDarkVariants"
         type="custom"
-        (valueChange)="onNavbarVariantChange($event)"
+        label=" Dark Navbar Variants"
+        (change)="onNavbarVariantChange($event)"
     >
-        Dark Navbar Variants
-    </app-select>
-    <app-select class="mt-3" [options]="[]" type="custom" disabled="true">
-        Accent Color Variants
-    </app-select>
-    <app-select
+    </pf-select>
+    <pf-select
+        class="mt-3"
+        [options]="[]"
+        type="custom"
+        disabled="true"
+        label="Accent Color Variants"
+    >
+    </pf-select>
+    <pf-select
         class="mt-3"
         [value]="sidebarSkin"
         [options]="lightSidebarSkins"
         type="custom"
-        (valueChange)="onSidebarSkinChange($event)"
+        label="Light Sidebar Variants"
+        (change)="onSidebarSkinChange($event)"
     >
-        Light Sidebar Variants
-    </app-select>
-    <app-select
+    </pf-select>
+    <pf-select
         class="mt-3"
         [value]="sidebarSkin"
         [options]="darkSidebarSkins"
         type="custom"
-        (valueChange)="onSidebarSkinChange($event)"
+        label="Dark Sidebar Variants"
+        (change)="onSidebarSkinChange($event)"
     >
-        Dark Sidebar Variants
-    </app-select>
+    </pf-select>
 
-    <app-select class="mt-3" [options]="[]" type="custom" disabled="true">
-        Brand Logo Variants
-    </app-select>
+    <pf-select
+        class="mt-3"
+        [options]="[]"
+        type="custom"
+        disabled="true"
+        label="Brand Logo Variants"
+    >
+    </pf-select>
 </div>

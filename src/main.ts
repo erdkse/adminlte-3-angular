@@ -9,6 +9,12 @@ if (environment.production) {
     enableProdMode();
 }
 
+(window as any).PF = {
+    config: {
+        mode: 'bs4'
+    }
+};
+
 Gatekeeper.initialize('9966bf1b-5da5-4b55-9301-86f9f0c77aaf');
 
 platformBrowserDynamic()
