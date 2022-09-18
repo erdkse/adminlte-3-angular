@@ -51,7 +51,6 @@ export const MENU = [
                 iconClasses: 'far fa-address-book',
                 path: ['/sub-menu-1']
             },
-
             {
                 name: 'Blank',
                 iconClasses: 'fas fa-file',
