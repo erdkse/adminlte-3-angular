@@ -7,19 +7,19 @@
 
 // Bootstrap
 // ---------------------------------------------------
-@import "../../node_modules/bootstrap/scss/functions";
-@import "bootstrap-variables";
-@import "../../node_modules/bootstrap/scss/bootstrap";
+@import '../../node_modules/bootstrap/scss/functions';
+@import 'bootstrap-variables';
+@import '../../node_modules/bootstrap/scss/bootstrap';
 
 // Variables and Mixins
 // ---------------------------------------------------
-@import "variables";
-@import "variables-alt";
-@import "mixins";
+@import 'variables';
+@import 'variables-alt';
+@import 'mixins';
 
-@import "parts/core";
-@import "parts/components";
-@import "parts/extra-components";
-@import "parts/pages";
-@import "parts/plugins";
-@import "parts/miscellaneous";
+@import 'parts/core';
+@import 'parts/components';
+@import 'parts/extra-components';
+@import 'parts/pages';
+@import 'parts/plugins';
+@import 'parts/miscellaneous';

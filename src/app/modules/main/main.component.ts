@@ -1,7 +1,13 @@
 import {AppState} from '@/store/state';
 import {ToggleSidebarMenu} from '@/store/ui/actions';
 import {UiState} from '@/store/ui/state';
-import {Component, HostBinding, OnInit, Renderer2} from '@angular/core';
+import {
+    AfterViewInit,
+    Component,
+    HostBinding,
+    OnInit,
+    Renderer2
+} from '@angular/core';
 import {Store} from '@ngrx/store';
 import {Observable} from 'rxjs';
 
@@ -10,9 +16,10 @@ import {Observable} from 'rxjs';
     templateUrl: './main.component.html',
     styleUrls: ['./main.component.scss']
 })
-export class MainComponent implements OnInit {
+export class MainComponent implements OnInit, AfterViewInit {
     @HostBinding('class') class = 'wrapper';
     public ui: Observable<UiState>;
+    public appLoaded: boolean = false;
 
     constructor(
         private renderer: Renderer2,
@@ -85,5 +92,9 @@ export class MainComponent implements OnInit {
 
     onToggleMenuSidebar() {
         this.store.dispatch(new ToggleSidebarMenu());
+    }
+
+    ngAfterViewInit() {
+        this.appLoaded = false;
     }
 }
