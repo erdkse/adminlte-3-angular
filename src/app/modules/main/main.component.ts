@@ -95,6 +95,6 @@ export class MainComponent implements OnInit, AfterViewInit {
     }
 
     ngAfterViewInit() {
-        this.appLoaded = false;
+        this.appLoaded = true;
     }
 }
