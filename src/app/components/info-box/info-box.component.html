@@ -1,0 +1,15 @@
+<div class="info-box" [ngClass]="'bg-' + variant">
+    <span class="info-box-icon" [ngClass]="'bg-' + iconVariant">
+        <fa-icon *ngIf="icon?.content" [icon]="icon.content"></fa-icon>
+    </span>
+
+    <div class="info-box-content">
+        <span class="info-box-text">{{ title }}</span>
+        <span class="info-box-number">{{ text }}</span>
+        <span [innerHTML]="progressBarContent"></span>
+    </div>
+    <app-overlay-loading
+        *ngIf="loading"
+        [type]="getLoadingPropType()"
+    ></app-overlay-loading>
+</div>
