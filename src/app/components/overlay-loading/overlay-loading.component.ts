@@ -1,4 +1,4 @@
-import {Component, Input} from '@angular/core';
+import {Component, HostBinding, Input} from '@angular/core';
 import {faSpinner} from '@fortawesome/free-solid-svg-icons';
 
 @Component({
@@ -9,4 +9,5 @@ import {faSpinner} from '@fortawesome/free-solid-svg-icons';
 export class OverlayLoadingComponent {
     faSpinner = faSpinner;
     @Input() type: 'dark' | 'light' = 'light';
+    @HostBinding('class') class = 'overlay';
 }

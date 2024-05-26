@@ -1,4 +1,3 @@
-:host {
-    position: absolute;
-    display: flex;
+:host([dark]) {
+    background-color: #00000080;
 }
