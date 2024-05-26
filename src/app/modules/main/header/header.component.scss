@@ -1,0 +1,16 @@
+.fa-bars {
+    cursor: pointer;
+}
+
+.nav-item {
+    .nav-link {
+        cursor: pointer;
+    }
+}
+.nav-item {
+    button.nav-link {
+        outline: none;
+        border: none;
+        background-color: transparent;
+    }
+}

@@ -1,0 +1,56 @@
+<pf-dropdown [hideArrow]="true" class="user-menu">
+    <div slot="head">
+        <a class="nav-link">
+            <pf-image
+                [src]="user.photoURL"
+                fallbackSrc="assets/img/default-profile.png"
+                class="user-image-small"
+                width="25"
+                height="25"
+                alt="User Image"
+                rounded="true"
+            />
+        </a>
+    </div>
+    <div slot="body">
+        <li class="user-header bg-primary">
+            <pf-image
+                [src]="user.photoURL"
+                fallbackSrc="assets/img/default-profile.png"
+                class="user-image-big"
+                alt="User Image"
+                width="90"
+                height="90"
+                rounded="true"
+            />
+
+            <p>
+                <span>{{ user.email }}</span>
+            </p>
+        </li>
+        <!-- Menu Body -->
+        <li class="user-body">
+            <div class="row">
+                <div class="col-4 text-center">
+                    <a [routerLink]="['/']">Followers</a>
+                </div>
+                <div class="col-4 text-center">
+                    <a [routerLink]="['/']">Sales</a>
+                </div>
+                <div class="col-4 text-center">
+                    <a [routerLink]="['/']">Friends</a>
+                </div>
+            </div>
+            <!-- /.row -->
+        </li>
+        <!-- Menu Footer-->
+        <li class="user-footer">
+            <a [routerLink]="['/profile']" class="btn btn-default btn-flat">
+                Profile
+            </a>
+            <a (click)="logout()" class="btn btn-default btn-flat float-right">
+                Sign out
+            </a>
+        </li>
+    </div>
+</pf-dropdown>

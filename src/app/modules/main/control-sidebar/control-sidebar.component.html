@@ -1,0 +1,63 @@
+<h5>Customize AdminLTE</h5>
+<hr class="mb-2" />
+<div style="padding: 8px 0">
+    <div style="display: flex; align-items: center">
+        <pf-checkbox id="darkMode" (change)="handleDarkModeChange($event)" />
+        <label for="darkMode" style="margin: 0; padding: 0; padding-left: 4px">
+            Dark mode
+        </label>
+    </div>
+    <pf-select
+        class="mt-3"
+        [value]="navbarVariant"
+        [options]="navbarLightVariants"
+        type="custom"
+        label="Light Navbar Variants"
+        (change)="onNavbarVariantChange($event)"
+    >
+    </pf-select>
+    <pf-select
+        class="mt-3"
+        [value]="navbarVariant"
+        [options]="navbarDarkVariants"
+        type="custom"
+        label=" Dark Navbar Variants"
+        (change)="onNavbarVariantChange($event)"
+    >
+    </pf-select>
+    <pf-select
+        class="mt-3"
+        [options]="[]"
+        type="custom"
+        disabled="true"
+        label="Accent Color Variants"
+    >
+    </pf-select>
+    <pf-select
+        class="mt-3"
+        [value]="sidebarSkin"
+        [options]="lightSidebarSkins"
+        type="custom"
+        label="Light Sidebar Variants"
+        (change)="onSidebarSkinChange($event)"
+    >
+    </pf-select>
+    <pf-select
+        class="mt-3"
+        [value]="sidebarSkin"
+        [options]="darkSidebarSkins"
+        type="custom"
+        label="Dark Sidebar Variants"
+        (change)="onSidebarSkinChange($event)"
+    >
+    </pf-select>
+
+    <pf-select
+        class="mt-3"
+        [options]="[]"
+        type="custom"
+        disabled="true"
+        label="Brand Logo Variants"
+    >
+    </pf-select>
+</div>

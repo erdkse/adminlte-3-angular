@@ -1,0 +1,53 @@
+<!-- Brand Logo -->
+<a [routerLink]="['/']" class="brand-link">
+    <pf-image
+        src="assets/img/logo.png"
+        alt="AdminLTE Logo"
+        class="brand-image"
+        height="32"
+        width="32"
+        rounded="true"
+        style="opacity: 0.8"
+    ></pf-image>
+    <span class="brand-text font-weight-light">AdminLTE 3</span>
+</a>
+
+<!-- Sidebar -->
+<div class="sidebar">
+    <!-- Sidebar user (optional) -->
+    <div
+        class="user-panel mt-3 pb-2 d-flex"
+        style="justify-content: start; align-items: center"
+    >
+        <pf-image
+            [src]="user.photoURL"
+            fallbackSrc="assets/img/default-profile.png"
+            style="margin-left: 12px"
+            alt="User Image"
+            width="34"
+            height="34"
+            rounded="true"
+        />
+        <div class="info">
+            <a [routerLink]="['/profile']" class="d-block">
+                {{ user.email }}
+            </a>
+        </div>
+    </div>
+
+    <div class="form-inline">
+        <app-sidebar-search></app-sidebar-search>
+    </div>
+
+    <!-- Sidebar Menu -->
+    <nav class="mt-2" style="overflow-y: hidden">
+        <ul
+            class="nav nav-pills nav-sidebar flex-column"
+            data-widget="treeview"
+            role="menu"
+            data-accordion="false"
+        >
+            <app-menu-item *ngFor="let item of menu" [menuItem]="item" />
+        </ul>
+    </nav>
+</div>

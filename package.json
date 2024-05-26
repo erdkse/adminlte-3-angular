@@ -1,0 +1,93 @@
+{
+    "name": "adminlte",
+    "version": "0.2.24",
+    "private": true,
+    "type": "module",
+    "scripts": {
+        "prepare": "husky install",
+        "start": "ng serve",
+        "build": "node write-envs.cjs && ng build --configuration production",
+        "test": "ng test",
+        "lint": "ng lint",
+        "e2e": "ng e2e",
+        "firebase:start": "firebase emulators:start",
+        "update": "ng update --force @angular/cli @angular/core",
+        "release:patch": "standard-version --release-as patch",
+        "release:minor": "standard-version --release-as minor",
+        "release:major": "standard-version --release-as major"
+    },
+    "lint-staged": {
+        "src/**/*.{ts,tsx}": [
+            "prettier --write"
+        ]
+    },
+    "husky": {
+        "hooks": {
+            "pre-commit": "pretty-quick --staged && ng lint && lint-staged"
+        }
+    },
+    "dependencies": {
+        "@angular/animations": "18.0.0",
+        "@angular/common": "18.0.0",
+        "@angular/compiler": "18.0.0",
+        "@angular/core": "18.0.0",
+        "@angular/forms": "18.0.0",
+        "@angular/localize": "18.0.0",
+        "@angular/platform-browser": "18.0.0",
+        "@angular/platform-browser-dynamic": "18.0.0",
+        "@angular/router": "18.0.0",
+        "@ngrx/store": "17.2.0",
+        "@ngx-env/core": "16.1.3",
+        "@profabric/angular-components": "0.2.5-beta.5",
+        "@schematics/angular": "18.0.1",
+        "core-js": "3.37.1",
+        "firebase": "10.12.1",
+        "luxon": "3.4.4",
+        "ngx-google-analytics": "14.0.1",
+        "ngx-toastr": "18.0.0",
+        "process": "0.11.10",
+        "rxjs": "7.8.1",
+        "tslib": "2.6.2",
+        "uuid": "9.0.1",
+        "zone.js": "~0.14.6"
+    },
+    "devDependencies": {
+        "@angular-devkit/build-angular": "18.0.1",
+        "@angular-eslint/builder": "17.5.1",
+        "@angular-eslint/eslint-plugin": "17.5.1",
+        "@angular-eslint/eslint-plugin-template": "17.5.1",
+        "@angular-eslint/schematics": "17.5.1",
+        "@angular-eslint/template-parser": "17.5.1",
+        "@angular/cli": "18.0.1",
+        "@angular/compiler-cli": "18.0.0",
+        "@angular/language-service": "18.0.0",
+        "@types/jasmine": "~5.1.4",
+        "@types/jasminewd2": "2.0.13",
+        "@types/luxon": "3.4.2",
+        "@types/node": "20.11.19",
+        "@typescript-eslint/eslint-plugin": "7.10.0",
+        "@typescript-eslint/parser": "7.10.0",
+        "bootstrap": "^4.6.1",
+        "eslint": "9.3.0",
+        "fs-web": "1.0.1",
+        "husky": "9.0.11",
+        "jasmine-core": "~5.1.2",
+        "jasmine-spec-reporter": "~7.0.0",
+        "karma": "6.4.3",
+        "karma-chrome-launcher": "~3.2.0",
+        "karma-coverage-istanbul-reporter": "3.0.3",
+        "karma-jasmine": "~5.1.0",
+        "karma-jasmine-html-reporter": "2.1.0",
+        "lint-staged": "15.2.4",
+        "os-browserify": "0.3.0",
+        "path-browserify": "1.0.1",
+        "prettier": "3.2.5",
+        "pretty-quick": "4.0.0",
+        "protractor": "7.0.0",
+        "standard-version": "9.5.0",
+        "ts-node": "10.9.2",
+        "tslint-config-prettier": "1.18.0",
+        "tslint-plugin-prettier": "2.3.0",
+        "typescript": "5.4.5"
+    }
+}

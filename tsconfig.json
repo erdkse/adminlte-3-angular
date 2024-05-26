@@ -1,0 +1,44 @@
+{
+    "compileOnSave": false,
+    "compilerOptions": {
+        "baseUrl": "./src",
+        "outDir": "./dist/out-tsc",
+        "sourceMap": false,
+        "declaration": false,
+        "experimentalDecorators": true,
+        "module": "es2020",
+        "moduleResolution": "node",
+        "importHelpers": true,
+        "target": "ES2022",
+        "lib": ["es2018", "dom"],
+        "resolveJsonModule": true,
+        "esModuleInterop": true,
+        "noUnusedParameters": false,
+        "noUnusedLocals": false,
+        "noImplicitOverride": true,
+        "noFallthroughCasesInSwitch": true,
+        "noImplicitThis": true,
+        "strictBindCallApply": true,
+        "useDefineForClassFields": false,
+        // "strictNullChecks": true,
+        // "noImplicitReturns": true,
+        // "strictFunctionTypes": true,
+        // "noImplicitAny": true,
+        "paths": {
+            "@components/*": ["app/components/*"],
+            "@guards/*": ["app/guards/*"],
+            "@modules/*": ["app/modules/*"],
+            "@pages/*": ["app/pages/*"],
+            "@services/*": ["app/services/*"],
+            "@/*": ["app/*"]
+        }
+    },
+    "angularCompilerOptions": {
+        "fullTemplateTypeCheck": true,
+        "strictInjectionParameters": true,
+        "enableResourceInlining": false,
+        "enableI18nLegacyMessageIdFormat": false,
+        "strictInputAccessModifiers": true,
+        "strictTemplates": true
+    }
+}
