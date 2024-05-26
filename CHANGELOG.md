@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.3.1](https://github.com/erdkse/adminlte-3-angular/compare/v0.3.0...v0.3.1) (2024-05-26)
+
+
+### Features
+
+* add angular font awesome library ([c1dcce5](https://github.com/erdkse/adminlte-3-angular/commit/c1dcce59d57fcdf47185f126a78b2cf418bb68a1))
+
 ## 0.3.0 (2024-05-26)
 
 
