@@ -36,10 +36,16 @@ import {ProfabricComponentsModule} from '@profabric/angular-components';
 import {SidebarSearchComponent} from './components/sidebar-search/sidebar-search.component';
 import {NgxGoogleAnalyticsModule} from 'ngx-google-analytics';
 import {environment} from 'environments/environment';
-import { ActivityTabComponent } from './pages/profile/activity-tab/activity-tab.component';
-import { TimelineTabComponent } from './pages/profile/timeline-tab/timeline-tab.component';
-import { SettingsTabComponent } from './pages/profile/settings-tab/settings-tab.component';
-import { PostComponent } from './pages/profile/post/post.component';
+import {ActivityTabComponent} from './pages/profile/activity-tab/activity-tab.component';
+import {TimelineTabComponent} from './pages/profile/timeline-tab/timeline-tab.component';
+import {SettingsTabComponent} from './pages/profile/settings-tab/settings-tab.component';
+import {PostComponent} from './pages/profile/post/post.component';
+import {InfoBoxComponent} from './components/info-box/info-box.component';
+import {SmallBoxComponent} from './components/small-box/small-box.component';
+import {ContentHeaderComponent} from './components/content-header/content-header.component';
+import {LoadingComponent} from './components/loading/loading.component';
+import {OverlayLoadingComponent} from './components/overlay-loading/overlay-loading.component';
+import {FontAwesomeModule} from '@fortawesome/angular-fontawesome';
 
 registerLocaleData(localeEn, 'en-EN');
 
@@ -69,7 +75,12 @@ registerLocaleData(localeEn, 'en-EN');
         ActivityTabComponent,
         TimelineTabComponent,
         SettingsTabComponent,
-        PostComponent
+        PostComponent,
+        InfoBoxComponent,
+        SmallBoxComponent,
+        ContentHeaderComponent,
+        LoadingComponent,
+        OverlayLoadingComponent
     ],
     bootstrap: [AppComponent],
     imports: [
@@ -85,7 +96,8 @@ registerLocaleData(localeEn, 'en-EN');
             positionClass: 'toast-top-right',
             preventDuplicates: true
         }),
-        NgxGoogleAnalyticsModule.forRoot(environment.GA_ID)
+        NgxGoogleAnalyticsModule.forRoot(environment.GA_ID),
+        FontAwesomeModule
     ],
     providers: [provideHttpClient(withInterceptorsFromDi())]
 })

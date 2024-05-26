@@ -1,100 +1,137 @@
-<div class="content-header">
-    <div class="container-fluid">
-        <div class="row mb-2">
-            <div class="col-sm-6">
-                <h1 class="m-0 text-dark">Dashboard</h1>
+<!-- dashboard.component.html -->
+<div>
+    <app-content-header [title]="'Dashboard'"></app-content-header>
+
+    <section class="content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-3 col-6">
+                    <app-small-box
+                        [title]="'New Orders'"
+                        [text]="'150'"
+                        [navigateTo]="'#'"
+                        [variant]="'info'"
+                        [icon]="{content: faCartShopping}"
+                    ></app-small-box>
+                </div>
+                <div class="col-lg-3 col-6">
+                    <app-small-box
+                        [title]="'Bounce Rate'"
+                        [text]="'53 %'"
+                        [navigateTo]="'#'"
+                        [variant]="'success'"
+                        [icon]="{content: faChartSimple}"
+                        [loading]="true"
+                    ></app-small-box>
+                </div>
+                <div class="col-lg-3 col-6">
+                    <app-small-box
+                        [title]="'User Registrations'"
+                        [text]="'44'"
+                        [navigateTo]="'#'"
+                        [variant]="'warning'"
+                        [icon]="{content: faUserPlus}"
+                        [loading]="'dark'"
+                    ></app-small-box>
+                </div>
+                <div class="col-lg-3 col-6">
+                    <app-small-box
+                        [title]="'Unique Visitors'"
+                        [text]="'65'"
+                        [navigateTo]="'#'"
+                        [variant]="'danger'"
+                        [icon]="{content: faChartPie, variant: 'success'}"
+                    ></app-small-box>
+                </div>
             </div>
-            <!-- /.col -->
-            <div class="col-sm-6">
-                <ol class="breadcrumb float-sm-right">
-                    <li class="breadcrumb-item"><a href="#">Home</a></li>
-                    <li class="breadcrumb-item active">Dashboard v1</li>
-                </ol>
+            <div class="row">
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <app-info-box
+                        [title]="'Messages'"
+                        [text]="'1,410'"
+                        [icon]="{content: faEnvelope, variant: 'info'}"
+                    ></app-info-box>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <app-info-box
+                        [title]="'Messages'"
+                        [text]="'1,410'"
+                        [variant]="'success'"
+                        [icon]="{content: faEnvelope}"
+                        [loading]="'dark'"
+                    ></app-info-box>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <app-info-box
+                        [title]="'Messages'"
+                        [text]="'1,410'"
+                        [variant]="'warning'"
+                        [icon]="{content: faEnvelope}"
+                    ></app-info-box>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <app-info-box
+                        [title]="'Messages'"
+                        [text]="'1,410'"
+                        [variant]="'danger'"
+                        [icon]="{content: faEnvelope}"
+                    ></app-info-box>
+                </div>
             </div>
-            <!-- /.col -->
+            <div class="row">
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <app-info-box
+                        [title]="'Bookmarks'"
+                        [text]="'41,410'"
+                        [icon]="{content: faBookmark, variant: 'info'}"
+                        [progressBar]="{
+                            description: '70% Increase in 30 Days',
+                            level: 70,
+                            variant: 'success'
+                        }"
+                    ></app-info-box>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <app-info-box
+                        [title]="'Bookmarks'"
+                        [text]="'41,410'"
+                        [variant]="'success'"
+                        [icon]="{content: faBookmark}"
+                        [progressBar]="{
+                            description: '70% Increase in 30 Days',
+                            level: 70,
+                            variant: 'light'
+                        }"
+                    ></app-info-box>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <app-info-box
+                        [title]="'Bookmarks'"
+                        [text]="'41,410'"
+                        [variant]="'warning'"
+                        [icon]="{content: faBookmark}"
+                        [loading]="true"
+                        [progressBar]="{
+                            description: '70% Increase in 30 Days',
+                            level: 70,
+                            variant: 'dark'
+                        }"
+                    ></app-info-box>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <app-info-box
+                        [title]="'Bookmarks'"
+                        [text]="'41,410'"
+                        [variant]="'danger'"
+                        [icon]="{content: faBookmark}"
+                        [progressBar]="{
+                            description: '70% Increase in 30 Days',
+                            level: 70,
+                            variant: 'light'
+                        }"
+                    ></app-info-box>
+                </div>
+            </div>
         </div>
-        <!-- /.row -->
-    </div>
-    <!-- /.container-fluid -->
+    </section>
 </div>
-<!-- /.content-header -->
-
-<!-- Main content -->
-<section class="content">
-    <div class="container-fluid">
-        <!-- Small boxes (Stat box) -->
-        <div class="row">
-            <div class="col-lg-3 col-6">
-                <!-- small box -->
-                <div class="small-box bg-info">
-                    <div class="inner">
-                        <h3>150</h3>
-
-                        <p>New Orders</p>
-                    </div>
-                    <div class="icon">
-                        <i class="ion ion-bag"></i>
-                    </div>
-                    <a href="#" class="small-box-footer"
-                        >More info <i class="fas fa-arrow-circle-right"></i
-                    ></a>
-                </div>
-            </div>
-            <!-- ./col -->
-            <div class="col-lg-3 col-6">
-                <!-- small box -->
-                <div class="small-box bg-success">
-                    <div class="inner">
-                        <h3>53<sup style="font-size: 20px">%</sup></h3>
-
-                        <p>Bounce Rate</p>
-                    </div>
-                    <div class="icon">
-                        <i class="ion ion-stats-bars"></i>
-                    </div>
-                    <a href="#" class="small-box-footer"
-                        >More info <i class="fas fa-arrow-circle-right"></i
-                    ></a>
-                </div>
-            </div>
-            <!-- ./col -->
-            <div class="col-lg-3 col-6">
-                <!-- small box -->
-                <div class="small-box bg-warning">
-                    <div class="inner">
-                        <h3>44</h3>
-
-                        <p>User Registrations</p>
-                    </div>
-                    <div class="icon">
-                        <i class="ion ion-person-add"></i>
-                    </div>
-                    <a href="#" class="small-box-footer"
-                        >More info <i class="fas fa-arrow-circle-right"></i
-                    ></a>
-                </div>
-            </div>
-            <!-- ./col -->
-            <div class="col-lg-3 col-6">
-                <!-- small box -->
-                <div class="small-box bg-danger">
-                    <div class="inner">
-                        <h3>65</h3>
-
-                        <p>Unique Visitors</p>
-                    </div>
-                    <div class="icon">
-                        <i class="ion ion-pie-graph"></i>
-                    </div>
-                    <a href="#" class="small-box-footer"
-                        >More info <i class="fas fa-arrow-circle-right"></i
-                    ></a>
-                </div>
-            </div>
-            <!-- ./col -->
-        </div>
-        <!-- /.row -->
-    </div>
-    <!-- Main row -->
-</section>
-<!-- /.content -->
