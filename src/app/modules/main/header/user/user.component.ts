@@ -21,6 +21,6 @@ export class UserComponent implements OnInit {
     }
 
     formatDate(date) {
-        return DateTime.fromISO(date).toFormat('dd LLL yyyy');
+        return DateTime.fromRFC2822(date).toFormat('dd LLL yyyy');
     }
 }

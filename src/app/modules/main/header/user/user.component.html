@@ -25,7 +25,14 @@
             />
 
             <p>
-                <span>{{ user.email }}</span>
+                {{ user?.email }}
+                <small>
+                    <span>Member since </span>
+
+                    <span *ngIf="user?.metadata?.creationTime">
+                        {{ formatDate(user?.metadata?.creationTime) }}
+                    </span>
+                </small>
             </p>
         </li>
         <!-- Menu Body -->
