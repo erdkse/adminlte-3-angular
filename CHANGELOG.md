@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.3.3](https://github.com/erdkse/adminlte-3-angular/compare/v0.3.2...v0.3.3) (2024-05-26)
+
+
+### Bug Fixes
+
+* add app loaded state ([90bf6bb](https://github.com/erdkse/adminlte-3-angular/commit/90bf6bb54505330e1263bf20e66d57665d852734))
+
 ### [0.3.2](https://github.com/erdkse/adminlte-3-angular/compare/v0.3.1...v0.3.2) (2024-05-26)
 
 
