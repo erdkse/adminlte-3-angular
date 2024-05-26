@@ -36,6 +36,10 @@ import {ProfabricComponentsModule} from '@profabric/angular-components';
 import {SidebarSearchComponent} from './components/sidebar-search/sidebar-search.component';
 import {NgxGoogleAnalyticsModule} from 'ngx-google-analytics';
 import {environment} from 'environments/environment';
+import { ActivityTabComponent } from './pages/profile/activity-tab/activity-tab.component';
+import { TimelineTabComponent } from './pages/profile/timeline-tab/timeline-tab.component';
+import { SettingsTabComponent } from './pages/profile/settings-tab/settings-tab.component';
+import { PostComponent } from './pages/profile/post/post.component';
 
 registerLocaleData(localeEn, 'en-EN');
 
@@ -61,7 +65,11 @@ registerLocaleData(localeEn, 'en-EN');
         SubMenuComponent,
         MenuItemComponent,
         ControlSidebarComponent,
-        SidebarSearchComponent
+        SidebarSearchComponent,
+        ActivityTabComponent,
+        TimelineTabComponent,
+        SettingsTabComponent,
+        PostComponent
     ],
     bootstrap: [AppComponent],
     imports: [
