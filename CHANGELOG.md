@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## 0.3.0 (2024-05-26)
+
+
+### Features
+
+* improve profile page ([3ac6069](https://github.com/erdkse/adminlte-3-angular/commit/3ac6069019513228f0670437e42583bac7fc2e78))
+
 ### [0.2.24](https://github.com/erdkse/adminlte-3-angular/compare/v0.2.23...v0.2.24) (2024-05-25)
 
 ### [0.2.23](https://github.com/erdkse/adminlte-3-angular/compare/v0.2.22...v0.2.23) (2024-05-24)
